@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<!-- PWA settings -->
+<link rel="manifest" href="manifest.webmanifest">
+
+<meta name="theme-color" content="#58cc02">
+
+<link rel="icon"
+      type="image/png"
+      href="icons/chess-icon-192.png"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Chess Kids</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 id="app-title">בעיות שחמט למתחילים</h1>
+
+        <button id="language-button" type="button">
+            English
+        </button>
+    </header>
+
+    <main>
+
+        <h2 id="instruction">
+            מצא מט במהלך אחד
+        </h2>
+
+        <div id="progress">
+            תרגיל 1 מתוך 90
+       </div>
+
+<div class="progress-container"
+     role="progressbar"
+     aria-label="התקדמות בתרגילים"
+     aria-valuemin="0"
+     aria-valuemax="90"
+     aria-valuenow="0">
+
+    <div id="progress-bar"></div>
+
+</div>
+<button id="restart-button" type="button">
+    התחל מחדש
+</button>
+        <div id="chessboard"></div>
+
+        <div id="message"
+             role="status"
+             aria-live="polite"></div>
+
+    </main>
+
+       <!-- Chess rules library -->
+    <script src="./chess.min.js"></script>
+
+    <!-- Application code --><!-- Pawn promotion window -->
+<div id="promotion-dialog"
+     class="promotion-dialog"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="promotion-title"
+     hidden>
+
+    <div class="promotion-box">
+
+        <h2 id="promotion-title">
+            בחר כלי להכתרה
+        </h2>
+
+        <div class="promotion-options">
+
+            <button type="button"
+                    class="promotion-choice"
+                    data-promotion="q"
+                    aria-label="Queen">
+                ♕
+            </button>
+
+            <button type="button"
+                    class="promotion-choice"
+                    data-promotion="r"
+                    aria-label="Rook">
+                ♖
+            </button>
+
+            <button type="button"
+                    class="promotion-choice"
+                    data-promotion="b"
+                    aria-label="Bishop">
+                ♗
+            </button>
+
+            <button type="button"
+                    class="promotion-choice"
+                    data-promotion="n"
+                    aria-label="Knight">
+                ♘
+            </button>
+
+        </div>
+
+        <button id="promotion-cancel" type="button">
+            ביטול
+        </button>
+
+    </div>
+</div>
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,4658 @@
+{
+  "schema_version": "1.0",
+  "language": "ru",
+  "description": "Chess puzzle database. All puzzles are intended as White to move and mate in 1. Task order follows source diagrams left to right, then top to bottom. Incorrect attempts may be retried; the next puzzle unlocks after a correct solution. Validation status distinguishes user-provided solutions from independent engine verification.",
+  "puzzles": [
+    {
+      "id": "M11-01",
+      "source_file": "מט 1-1.pdf",
+      "position_number": 1,
+      "title": "Мат в 1 ход — позиция 1",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "K": [
+          "e1"
+        ],
+        "R": [
+          "g1",
+          "e7"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h5"
+        ]
+      },
+      "fen": "8/4R3/8/7k/8/8/8/4K1R1 w - - 0 1",
+      "solution_uci": "e7h7",
+      "solution_san": "Rh7",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rh7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M11-02",
+      "source_file": "מט 1-1.pdf",
+      "position_number": 2,
+      "title": "Мат в 1 ход — позиция 2",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "2+1",
+      "white_pieces": {
+        "K": [
+          "f2"
+        ],
+        "R": [
+          "e3"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h1"
+        ]
+      },
+      "fen": "8/8/8/8/8/4R3/5K2/7k w - - 0 1",
+      "solution_uci": "e3h3",
+      "solution_san": "Rh3",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rh3#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M11-03",
+      "source_file": "מט 1-1.pdf",
+      "position_number": 3,
+      "title": "Мат в 1 ход — позиция 3",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "2+1",
+      "white_pieces": {
+        "K": [
+          "e6"
+        ],
+        "R": [
+          "g7"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "e8"
+        ]
+      },
+      "fen": "4k3/6R1/4K3/8/8/8/8/8 w - - 0 1",
+      "solution_uci": "g7g8",
+      "solution_san": "Rg8",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rg8#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M11-04",
+      "source_file": "מט 1-1.pdf",
+      "position_number": 4,
+      "title": "Мат в 1 ход — позиция 4",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "K": [
+          "h5"
+        ],
+        "R": [
+          "g8",
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h7"
+        ]
+      },
+      "fen": "6R1/7k/8/7K/8/8/8/6R1 w - - 0 1",
+      "solution_uci": "g1g7",
+      "solution_san": "R1g7",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "R1g7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M11-05",
+      "source_file": "מט 1-1.pdf",
+      "position_number": 5,
+      "title": "Мат в 1 ход — позиция 5",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "5+5",
+      "white_pieces": {
+        "K": [
+          "g1"
+        ],
+        "R": [
+          "e1"
+        ],
+        "P": [
+          "f2",
+          "g2",
+          "h2"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ],
+        "r": [
+          "d7"
+        ],
+        "p": [
+          "f7",
+          "g7",
+          "h7"
+        ]
+      },
+      "fen": "6k1/3r1ppp/8/8/8/8/5PPP/4R1K1 w - - 0 1",
+      "solution_uci": "e1e8",
+      "solution_san": "Re8",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Re8#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M11-06",
+      "source_file": "מט 1-1.pdf",
+      "position_number": 6,
+      "title": "Мат в 1 ход — позиция 6",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+4",
+      "white_pieces": {
+        "K": [
+          "h1"
+        ],
+        "R": [
+          "d1"
+        ],
+        "P": [
+          "f6"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ],
+        "r": [
+          "a2"
+        ],
+        "p": [
+          "f7",
+          "h7"
+        ]
+      },
+      "fen": "6k1/5p1p/5P2/8/8/8/r7/3R3K w - - 0 1",
+      "solution_uci": "d1d8",
+      "solution_san": "Rd8",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rd8#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M11-07",
+      "source_file": "מט 1-1.pdf",
+      "position_number": 7,
+      "title": "Мат в 1 ход — позиция 7",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "2+1",
+      "white_pieces": {
+        "K": [
+          "f6"
+        ],
+        "R": [
+          "a1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ],
+        "p": [
+          "h7"
+        ]
+      },
+      "fen": "6k1/7p/5K2/8/8/8/8/R7 w - - 0 1",
+      "solution_uci": "a1a8",
+      "solution_san": "Ra8",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Ra8#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M11-08",
+      "source_file": "מט 1-1.pdf",
+      "position_number": 8,
+      "title": "Мат в 1 ход — позиция 8",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+2",
+      "white_pieces": {
+        "K": [
+          "g1"
+        ],
+        "R": [
+          "g4"
+        ],
+        "P": [
+          "b6"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "a8"
+        ],
+        "p": [
+          "b7"
+        ]
+      },
+      "fen": "k7/1p6/1P6/8/6R1/8/8/6K1 w - - 0 1",
+      "solution_uci": "g4g8",
+      "solution_san": "Rg8",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rg8#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M11-09",
+      "source_file": "מט 1-1.pdf",
+      "position_number": 9,
+      "title": "Мат в 1 ход — позиция 9",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+2",
+      "white_pieces": {
+        "K": [
+          "g1"
+        ],
+        "R": [
+          "a2"
+        ],
+        "N": [
+          "e7"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h7"
+        ],
+        "p": [
+          "g7"
+        ]
+      },
+      "fen": "8/4N1pk/8/8/8/8/R7/6K1 w - - 0 1",
+      "solution_uci": "a2h2",
+      "solution_san": "Rh2",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rh2#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M12-01",
+      "source_file": "מט 1-2.pdf",
+      "position_number": 1,
+      "title": "Мат в 1 ход — позиция 1",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "K": [
+          "f6"
+        ],
+        "R": [
+          "b5"
+        ],
+        "B": [
+          "b3"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ]
+      },
+      "fen": "7k/8/5K2/1R6/8/1B6/8/8 w - - 0 1",
+      "solution_uci": "b5h5",
+      "solution_san": "Rh5",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rh5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M12-02",
+      "source_file": "מט 1-2.pdf",
+      "position_number": 2,
+      "title": "Мат в 1 ход — позиция 2",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "K": [
+          "f8"
+        ],
+        "R": [
+          "a7"
+        ],
+        "N": [
+          "g5"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ]
+      },
+      "fen": "5K1k/R7/8/6N1/8/8/8/8 w - - 0 1",
+      "solution_uci": "a7h7",
+      "solution_san": "Rh7",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rh7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M12-03",
+      "source_file": "מט 1-2.pdf",
+      "position_number": 3,
+      "title": "Мат в 1 ход — позиция 3",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "K": [
+          "f6"
+        ],
+        "R": [
+          "b4"
+        ],
+        "P": [
+          "g3"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h5"
+        ]
+      },
+      "fen": "8/8/5K2/7k/1R6/6P1/8/8 w - - 0 1",
+      "solution_uci": "b4h4",
+      "solution_san": "Rh4",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rh4#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M12-04",
+      "source_file": "מט 1-2.pdf",
+      "position_number": 4,
+      "title": "Мат в 1 ход — позиция 4",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "K": [
+          "f3"
+        ],
+        "R": [
+          "a6"
+        ],
+        "B": [
+          "d2"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h5"
+        ]
+      },
+      "fen": "8/8/R7/7k/8/5K2/3B4/8 w - - 0 1",
+      "solution_uci": "a6h6",
+      "solution_san": "Rh6",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rh6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M12-05",
+      "source_file": "מט 1-2.pdf",
+      "position_number": 5,
+      "title": "Мат в 1 ход — позиция 5",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "K": [
+          "f6"
+        ],
+        "R": [
+          "g1"
+        ],
+        "N": [
+          "f5"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h5"
+        ]
+      },
+      "fen": "8/8/5K2/5N1k/8/8/8/6R1 w - - 0 1",
+      "solution_uci": "g1g5",
+      "solution_san": "Rg5",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rg5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M12-06",
+      "source_file": "מט 1-2.pdf",
+      "position_number": 6,
+      "title": "Мат в 1 ход — позиция 6",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "K": [
+          "f6"
+        ],
+        "R": [
+          "d3"
+        ],
+        "B": [
+          "c2"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ]
+      },
+      "fen": "6k1/8/5K2/8/8/3R4/2B5/8 w - - 0 1",
+      "solution_uci": "d3d8",
+      "solution_san": "Rd8",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rd8#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M12-07",
+      "source_file": "מט 1-2.pdf",
+      "position_number": 7,
+      "title": "Мат в 1 ход — позиция 7",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "2+1",
+      "white_pieces": {
+        "K": [
+          "f6"
+        ],
+        "Q": [
+          "c7"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ]
+      },
+      "fen": "6k1/2Q5/5K2/8/8/8/8/8 w - - 0 1",
+      "solution_uci": "c7g7",
+      "solution_san": "Qg7",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qg7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M12-08",
+      "source_file": "מט 1-2.pdf",
+      "position_number": 8,
+      "title": "Мат в 1 ход — позиция 8",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "2+1",
+      "white_pieces": {
+        "K": [
+          "c6"
+        ],
+        "Q": [
+          "h7"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "a8"
+        ]
+      },
+      "fen": "k7/7Q/2K5/8/8/8/8/8 w - - 0 1",
+      "solution_uci": "h7b7",
+      "solution_san": "Qb7",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qb7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M12-09",
+      "source_file": "מט 1-2.pdf",
+      "position_number": 9,
+      "title": "Мат в 1 ход — позиция 9",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "2+1",
+      "white_pieces": {
+        "K": [
+          "e6"
+        ],
+        "Q": [
+          "h2"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "d8"
+        ]
+      },
+      "fen": "3k4/8/4K3/8/8/8/7Q/8 w - - 0 1",
+      "solution_uci": "h2b8",
+      "solution_san": "Qb8",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qb8#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M13-01",
+      "source_file": "מט 1-3.pdf",
+      "position_number": 1,
+      "title": "Мат в 1 ход — מט 1-3, позиция 1",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "a6"
+        ],
+        "N": [
+          "d7",
+          "c4"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "a8"
+        ]
+      },
+      "fen": "k7/3N4/K7/8/2N5/8/8/8 w - - 0 1",
+      "solution_uci": "c4b6",
+      "solution_san": "Ncb6",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Ncb6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M13-02",
+      "source_file": "מט 1-3.pdf",
+      "position_number": 2,
+      "title": "Мат в 1 ход — מט 1-3, позиция 2",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "g1"
+        ],
+        "N": [
+          "h5"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ],
+        "r": [
+          "g8"
+        ],
+        "p": [
+          "g7",
+          "h7"
+        ]
+      },
+      "fen": "6rk/6pp/7N/8/8/8/8/6K1 w - - 0 1",
+      "solution_uci": null,
+      "solution_san": "Nf7",
+      "validated": false,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": false,
+        "mate_in_1_verified": false
+      },
+      "validation_status": "illegal_or_ambiguous",
+      "accepted_solutions": [
+        "Nf7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M13-03",
+      "source_file": "מט 1-3.pdf",
+      "position_number": 3,
+      "title": "Мат в 1 ход — מט 1-3, позиция 3",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "f7"
+        ],
+        "P": [
+          "g6"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ],
+        "n": [
+          "h7"
+        ]
+      },
+      "fen": "7k/5K1n/6P1/8/8/8/8/8 w - - 0 1",
+      "solution_uci": "g6g7",
+      "solution_san": "g7",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "g7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M13-04",
+      "source_file": "מט 1-3.pdf",
+      "position_number": 4,
+      "title": "Мат в 1 ход — מט 1-3, позиция 4",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "f7"
+        ],
+        "P": [
+          "f5"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h7"
+        ],
+        "q": [
+          "h8"
+        ],
+        "n": [
+          "e6"
+        ],
+        "p": [
+          "g6",
+          "h6"
+        ]
+      },
+      "fen": "7q/5K1k/4n1pp/5P2/8/8/8/8 w - - 0 1",
+      "solution_uci": "f5g6",
+      "solution_san": "fxg6",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "fxg6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M13-05",
+      "source_file": "מט 1-3.pdf",
+      "position_number": 5,
+      "title": "Мат в 1 ход — מט 1-3, позиция 5",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "g1"
+        ],
+        "q": [
+          "b7"
+        ],
+        "P": [
+          "d7"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ],
+        "n": [
+          "c8"
+        ],
+        "p": [
+          "g7",
+          "h7"
+        ]
+      },
+      "fen": "2n4k/1q1P2pp/8/8/8/8/8/6K1 w - - 0 1",
+      "solution_uci": "d7d8q",
+      "solution_san": "d8=Q#",
+      "accepted_solutions": [
+        "d8=Q#",
+        "d8=R#"
+      ],
+      "validated": false,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": false,
+        "mate_in_1_verified": false
+      },
+      "validation_status": "illegal_or_ambiguous",
+      "app_status": "READY"
+    },
+    {
+      "id": "M13-06",
+      "source_file": "מט 1-3.pdf",
+      "position_number": 6,
+      "title": "Мат в 1 ход — מט 1-3, позиция 6",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "g1"
+        ],
+        "Q": [
+          "c3"
+        ],
+        "B": [
+          "b2"
+        ],
+        "P": [
+          "g2",
+          "h2"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ],
+        "r": [
+          "f8"
+        ],
+        "q": [
+          "e6"
+        ],
+        "p": [
+          "g7",
+          "h7"
+        ]
+      },
+      "fen": "5rk1/6pp/4q3/8/8/2Q5/1B4PP/6K1 w - - 0 1",
+      "solution_uci": "c3g7",
+      "solution_san": "Qxg7",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qxg7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M13-07",
+      "source_file": "מט 1-3.pdf",
+      "position_number": 7,
+      "title": "Мат в 1 ход — מט 1-3, позиция 7",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "g1"
+        ],
+        "Q": [
+          "b1"
+        ],
+        "N": [
+          "g5"
+        ],
+        "P": [
+          "f2",
+          "g2",
+          "h2"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ],
+        "r": [
+          "e8",
+          "f8"
+        ],
+        "q": [
+          "e6"
+        ],
+        "p": [
+          "f7",
+          "g7",
+          "h7"
+        ]
+      },
+      "fen": "4rrk1/5ppp/4q3/6N1/8/8/5PPP/1Q4K1 w - - 0 1",
+      "solution_uci": "b1h7",
+      "solution_san": "Qxh7",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qxh7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M13-08",
+      "source_file": "מט 1-3.pdf",
+      "position_number": 8,
+      "title": "Мат в 1 ход — מט 1-3, позиция 8",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "g1"
+        ],
+        "Q": [
+          "h3"
+        ],
+        "P": [
+          "g6",
+          "g2"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ],
+        "r": [
+          "f8"
+        ],
+        "p": [
+          "f7",
+          "g7",
+          "h7"
+        ]
+      },
+      "fen": "5rk1/5ppp/6P1/8/8/7Q/6P1/6K1 w - - 0 1",
+      "solution_uci": "h3h7",
+      "solution_san": "Qxh7",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qxh7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M13-09",
+      "source_file": "מט 1-3.pdf",
+      "position_number": 9,
+      "title": "Мат в 1 ход — מט 1-3, позиция 9",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "f2"
+        ],
+        "Q": [
+          "h4"
+        ],
+        "R": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ],
+        "r": [
+          "f8"
+        ],
+        "n": [
+          "f6"
+        ],
+        "p": [
+          "g7",
+          "g5"
+        ]
+      },
+      "fen": "5rk1/5pp1/5n2/6p1/7Q/8/5K2/7R w - - 0 1",
+      "solution_uci": "h4h8",
+      "solution_san": "Qh8",
+      "validated": false,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": false
+      },
+      "validation_status": "not_mate_or_invalid_position",
+      "accepted_solutions": [
+        "Qh8#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M14-01",
+      "source_file": "מט 1-4.pdf",
+      "position_number": 1,
+      "title": "Мат в 1 ход — מט 1-4, позиция 1",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "g6"
+        ],
+        "B": [
+          "d2"
+        ],
+        "P": [
+          "f7"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "f8"
+        ]
+      },
+      "fen": "5k2/5P2/6K1/8/8/8/3B4/8 w - - 0 1",
+      "solution_uci": "d2b4",
+      "solution_san": "Bb4",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Bb4#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M14-02",
+      "source_file": "מט 1-4.pdf",
+      "position_number": 2,
+      "title": "Мат в 1 ход — מט 1-4, позиция 2",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "g7"
+        ],
+        "N": [
+          "f8"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ],
+        "n": [
+          "h7"
+        ]
+      },
+      "fen": "5N1k/5K1n/8/8/8/8/8/8 w - - 0 1",
+      "solution_uci": null,
+      "solution_san": "Ng6",
+      "validated": false,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": false,
+        "mate_in_1_verified": false
+      },
+      "validation_status": "illegal_or_ambiguous",
+      "accepted_solutions": [
+        "Ng6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M14-03",
+      "source_file": "מט 1-4.pdf",
+      "position_number": 3,
+      "title": "Мат в 1 ход — מט 1-4, позиция 3",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "g6"
+        ],
+        "B": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ],
+        "b": [
+          "g8"
+        ]
+      },
+      "fen": "6bk/8/6K1/8/8/8/8/6B1 w - - 0 1",
+      "solution_uci": "g1d4",
+      "solution_san": "Bd4",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Bd4#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M14-04",
+      "source_file": "מט 1-4.pdf",
+      "position_number": 4,
+      "title": "Мат в 1 ход — מט 1-4, позиция 4",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "d8"
+        ],
+        "B": [
+          "g3",
+          "f1"
+        ],
+        "P": [
+          "g5",
+          "e4"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "e6"
+        ]
+      },
+      "fen": "3K4/8/4k3/6P1/4P3/6B1/8/5B2 w - - 0 1",
+      "solution_uci": "f1c4",
+      "solution_san": "Bc4",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Bc4#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M14-05",
+      "source_file": "מט 1-4.pdf",
+      "position_number": 5,
+      "title": "Мат в 1 ход — מט 1-4, позиция 5",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "f2"
+        ],
+        "N": [
+          "d5",
+          "e4"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "c8"
+        ],
+        "n": [
+          "b7",
+          "c7"
+        ]
+      },
+      "fen": "2k5/1nn5/2N5/3N4/8/8/5K2/8 w - - 0 1",
+      "solution_uci": "d5b6",
+      "solution_san": "Nb6",
+      "validated": false,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": false
+      },
+      "validation_status": "not_mate_or_invalid_position",
+      "accepted_solutions": [
+        "Nb6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M14-06",
+      "source_file": "מט 1-4.pdf",
+      "position_number": 6,
+      "title": "Мат в 1 ход — מט 1-4, позиция 6",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "f2"
+        ],
+        "Q": [
+          "b2"
+        ],
+        "N": [
+          "f6"
+        ],
+        "P": [
+          "f7"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h6"
+        ],
+        "n": [
+          "f5"
+        ]
+      },
+      "fen": "8/4NP2/7k/5n2/5K2/8/1Q6/8 w - - 0 1",
+      "solution_uci": null,
+      "solution_san": "Qh8",
+      "validated": false,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": false,
+        "mate_in_1_verified": false
+      },
+      "validation_status": "illegal_or_ambiguous",
+      "accepted_solutions": [
+        "Qh8#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M14-07",
+      "source_file": "מט 1-4.pdf",
+      "position_number": 7,
+      "title": "Мат в 1 ход — מט 1-4, позиция 7",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "g1"
+        ],
+        "B": [
+          "b2"
+        ],
+        "Q": [
+          "f7"
+        ],
+        "P": [
+          "a2",
+          "b3",
+          "c2",
+          "e6",
+          "g2",
+          "h2"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ],
+        "r": [
+          "e8"
+        ],
+        "q": [
+          "e7"
+        ],
+        "p": [
+          "a7",
+          "b7",
+          "c6",
+          "g7",
+          "h7"
+        ]
+      },
+      "fen": "4r2k/pp2qQpp/2p1P3/8/8/1P6/PBP3PP/6K1 w - - 0 1",
+      "solution_uci": "b2g7",
+      "solution_san": "Bg7",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Bxg7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M14-08",
+      "source_file": "מט 1-4.pdf",
+      "position_number": 8,
+      "title": "Мат в 1 ход — מט 1-4, позиция 8",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "g2"
+        ],
+        "B": [
+          "a1"
+        ],
+        "N": [
+          "g4"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ],
+        "r": [
+          "f8"
+        ],
+        "p": [
+          "f7",
+          "g6",
+          "h7"
+        ]
+      },
+      "fen": "5rk1/5p1p/6p1/8/6N1/8/6K1/B7 w - - 0 1",
+      "solution_uci": "g4h6",
+      "solution_san": "Nh6",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Nh6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M14-09",
+      "source_file": "מט 1-4.pdf",
+      "position_number": 9,
+      "title": "Мат в 1 ход — מט 1-4, позиция 9",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "K": [
+          "g2"
+        ],
+        "B": [
+          "h2"
+        ],
+        "N": [
+          "e7"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ],
+        "p": [
+          "h7"
+        ]
+      },
+      "fen": "7k/4N2p/8/8/8/8/6KB/8 w - - 0 1",
+      "solution_uci": "h2e5",
+      "solution_san": "Be5",
+      "validated": true,
+      "notes": "FEN присутствует, но легальность решения и мат в 1 ход не проверены Stockfish.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Be5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M15-01",
+      "source_file": "מט 1-5.pdf",
+      "position_number": 1,
+      "title": "Мат в 1 ход — מט 1-5, позиция 1",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "P": [
+          "d4",
+          "e4",
+          "a2",
+          "b2",
+          "c2",
+          "f2",
+          "g2",
+          "h2"
+        ],
+        "R": [
+          "a1",
+          "h1"
+        ],
+        "N": [
+          "b1",
+          "g1"
+        ],
+        "B": [
+          "c1",
+          "f1"
+        ],
+        "Q": [
+          "d1"
+        ],
+        "K": [
+          "e1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "a8",
+          "h8"
+        ],
+        "n": [
+          "b8",
+          "g8"
+        ],
+        "b": [
+          "c8",
+          "f8"
+        ],
+        "q": [
+          "d8"
+        ],
+        "k": [
+          "e8"
+        ],
+        "p": [
+          "a7",
+          "b7",
+          "c7",
+          "d7",
+          "e7",
+          "h7",
+          "f6",
+          "g5"
+        ]
+      },
+      "fen": "rnbqkbnr/ppppp2p/5p2/6p1/3PP3/8/PPP2PPP/RNBQKBNR w KQkq - 0 1",
+      "solution_uci": "d1h5",
+      "solution_san": "Qh5",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qh5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M15-02",
+      "source_file": "מט 1-5.pdf",
+      "position_number": 2,
+      "title": "Мат в 1 ход — מט 1-5, позиция 2",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "Q": [
+          "h5"
+        ],
+        "P": [
+          "e4",
+          "a2",
+          "b2",
+          "c2",
+          "d2",
+          "f2",
+          "g2",
+          "h2"
+        ],
+        "R": [
+          "a1",
+          "h1"
+        ],
+        "N": [
+          "b1",
+          "g1"
+        ],
+        "B": [
+          "c1",
+          "f1"
+        ],
+        "K": [
+          "e1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "a8",
+          "h8"
+        ],
+        "n": [
+          "b8",
+          "g8"
+        ],
+        "b": [
+          "c8",
+          "f8"
+        ],
+        "q": [
+          "d8"
+        ],
+        "p": [
+          "a7",
+          "b7",
+          "c7",
+          "d7",
+          "f7",
+          "g7",
+          "h7",
+          "e5"
+        ],
+        "k": [
+          "e7"
+        ]
+      },
+      "fen": "rnbq1bnr/ppppkppp/8/4p2Q/4P3/8/PPPP1PPP/RNB1KBNR w KQ - 0 1",
+      "solution_uci": "h5e5",
+      "solution_san": "Qxe5",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qxe5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M15-03",
+      "source_file": "מט 1-5.pdf",
+      "position_number": 3,
+      "title": "Мат в 1 ход — מט 1-5, позиция 3",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "Q": [
+          "h5"
+        ],
+        "B": [
+          "c4",
+          "c1"
+        ],
+        "P": [
+          "e4",
+          "a2",
+          "b2",
+          "c2",
+          "d2",
+          "f2",
+          "g2",
+          "h2"
+        ],
+        "R": [
+          "a1",
+          "h1"
+        ],
+        "N": [
+          "b1",
+          "g1"
+        ],
+        "K": [
+          "e1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "a8",
+          "h8"
+        ],
+        "b": [
+          "c8",
+          "f8"
+        ],
+        "q": [
+          "d8"
+        ],
+        "k": [
+          "e8"
+        ],
+        "p": [
+          "a7",
+          "b7",
+          "c7",
+          "d7",
+          "f7",
+          "g7",
+          "h7",
+          "e5"
+        ],
+        "n": [
+          "c6",
+          "f6"
+        ]
+      },
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 0 1",
+      "solution_uci": "h5f7",
+      "solution_san": "Qxf7",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qxf7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M15-04",
+      "source_file": "מט 1-5.pdf",
+      "position_number": 4,
+      "title": "Мат в 1 ход — מט 1-5, позиция 4",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "B": [
+          "f7",
+          "c1"
+        ],
+        "N": [
+          "e5",
+          "c3"
+        ],
+        "P": [
+          "e4",
+          "a2",
+          "b2",
+          "c2",
+          "d2",
+          "f2",
+          "g2",
+          "h2"
+        ],
+        "R": [
+          "a1",
+          "h1"
+        ],
+        "K": [
+          "e1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "a8",
+          "h8"
+        ],
+        "q": [
+          "d8"
+        ],
+        "b": [
+          "f8",
+          "d1"
+        ],
+        "n": [
+          "g8",
+          "c6"
+        ],
+        "p": [
+          "a7",
+          "b7",
+          "c7",
+          "g7",
+          "h7",
+          "d6"
+        ],
+        "k": [
+          "e7"
+        ]
+      },
+      "fen": "r2q1bnr/ppp1kBpp/2np4/4N3/4P3/2N5/PPPP1PPP/R1BbK2R w KQ - 0 1",
+      "solution_uci": "c3d5",
+      "solution_san": "Nd5",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Nd5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M15-05",
+      "source_file": "מט 1-5.pdf",
+      "position_number": 5,
+      "title": "Мат в 1 ход — מט 1-5, позиция 5",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "Q": [
+          "b5"
+        ],
+        "K": [
+          "d4"
+        ],
+        "N": [
+          "c3"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "d2"
+        ],
+        "q": [
+          "c1"
+        ]
+      },
+      "fen": "8/8/8/1Q6/3K4/2N5/3k4/2q5 w - - 0 1",
+      "solution_uci": "b5e2",
+      "solution_san": "Qe2",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qe2#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M15-06",
+      "source_file": "מט 1-5.pdf",
+      "position_number": 6,
+      "title": "Мат в 1 ход — מט 1-5, позиция 6",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "Q": [
+          "a6"
+        ],
+        "K": [
+          "d4"
+        ],
+        "N": [
+          "c3"
+        ],
+        "B": [
+          "g3"
+        ]
+      },
+      "black_pieces": {
+        "p": [
+          "c2"
+        ],
+        "k": [
+          "d2"
+        ]
+      },
+      "fen": "8/8/Q7/8/3K4/2N3B1/2pk4/8 w - - 0 1",
+      "solution_uci": "a6h6",
+      "solution_san": "Qh6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qh6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M15-07",
+      "source_file": "מט 1-5.pdf",
+      "position_number": 7,
+      "title": "Мат в 1 ход — מט 1-5, позиция 7",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "Q": [
+          "b5"
+        ],
+        "K": [
+          "d4"
+        ],
+        "N": [
+          "c3"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "d2"
+        ],
+        "q": [
+          "e1"
+        ]
+      },
+      "fen": "8/8/8/1Q6/3K4/2N5/3k4/4q3 w - - 0 1",
+      "solution_uci": "b5b2",
+      "solution_san": "Qb2",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qb2#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M15-08",
+      "source_file": "מט 1-5.pdf",
+      "position_number": 8,
+      "title": "Мат в 1 ход — מט 1-5, позиция 8",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "Q": [
+          "a7"
+        ],
+        "P": [
+          "e4"
+        ],
+        "K": [
+          "d2"
+        ]
+      },
+      "black_pieces": {
+        "p": [
+          "e5"
+        ],
+        "k": [
+          "f4"
+        ],
+        "q": [
+          "g4"
+        ]
+      },
+      "fen": "8/Q7/8/4p3/4Pkq1/8/3K4/8 w - - 0 1",
+      "solution_uci": "a7e3",
+      "solution_san": "Qe3",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qe3#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M15-09",
+      "source_file": "מט 1-5.pdf",
+      "position_number": 9,
+      "title": "Мат в 1 ход — מט 1-5, позиция 9",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "Q": [
+          "h6"
+        ],
+        "K": [
+          "f2"
+        ]
+      },
+      "black_pieces": {
+        "p": [
+          "d5",
+          "c4"
+        ],
+        "k": [
+          "d4"
+        ]
+      },
+      "fen": "8/8/7Q/3p4/2pk4/8/5K2/8 w - - 0 1",
+      "solution_uci": "h6e3",
+      "solution_san": "Qe3",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qe3#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M16-01",
+      "source_file": "מט 1-6.pdf",
+      "position_number": 1,
+      "title": "Мат в 1 ход — מט 1-6, позиция 1",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "B": [
+          "c8"
+        ],
+        "N": [
+          "g4"
+        ],
+        "Q": [
+          "g3"
+        ],
+        "K": [
+          "a1"
+        ]
+      },
+      "black_pieces": {
+        "p": [
+          "c5",
+          "d4"
+        ],
+        "k": [
+          "e4"
+        ]
+      },
+      "fen": "2B5/8/8/2p5/3pk1N1/6Q1/8/K7 w - - 0 1",
+      "solution_uci": "g4f6",
+      "solution_san": "Nf6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Nf6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M16-02",
+      "source_file": "מט 1-6.pdf",
+      "position_number": 2,
+      "title": "Мат в 1 ход — מט 1-6, позиция 2",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "B": [
+          "d7"
+        ],
+        "N": [
+          "g4"
+        ],
+        "Q": [
+          "g3"
+        ],
+        "K": [
+          "a1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "d5"
+        ],
+        "p": [
+          "c4",
+          "d4"
+        ]
+      },
+      "fen": "8/3B4/8/3k4/2pp2N1/6Q1/8/K7 w - - 0 1",
+      "solution_uci": "g3e5",
+      "solution_san": "Qe5",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qe5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M16-03",
+      "source_file": "מט 1-6.pdf",
+      "position_number": 3,
+      "title": "Мат в 1 ход — מט 1-6, позиция 3",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "B": [
+          "d7"
+        ],
+        "N": [
+          "g4"
+        ],
+        "Q": [
+          "g3"
+        ],
+        "K": [
+          "a1"
+        ]
+      },
+      "black_pieces": {
+        "p": [
+          "c5",
+          "d3"
+        ],
+        "k": [
+          "d5"
+        ]
+      },
+      "fen": "8/3B4/8/2pk4/6N1/3p2Q1/8/K7 w - - 0 1",
+      "solution_uci": "g3d3",
+      "solution_san": "Qxd3",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qxd3#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M16-04",
+      "source_file": "מט 1-6.pdf",
+      "position_number": 4,
+      "title": "Мат в 1 ход — מט 1-6, позиция 4",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "Q": [
+          "e4"
+        ],
+        "R": [
+          "a2"
+        ],
+        "K": [
+          "a1"
+        ]
+      },
+      "black_pieces": {
+        "n": [
+          "h6"
+        ],
+        "k": [
+          "h3"
+        ],
+        "p": [
+          "h2"
+        ]
+      },
+      "fen": "8/8/7n/8/4Q3/7k/R6p/K7 w - - 0 1",
+      "solution_uci": "a2a3",
+      "solution_san": "Ra3",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Ra3#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M16-05",
+      "source_file": "מט 1-6.pdf",
+      "position_number": 5,
+      "title": "Мат в 1 ход — מט 1-6, позиция 5",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "R": [
+          "g8"
+        ],
+        "Q": [
+          "e4"
+        ],
+        "K": [
+          "a1"
+        ]
+      },
+      "black_pieces": {
+        "n": [
+          "f3"
+        ],
+        "k": [
+          "h3"
+        ],
+        "p": [
+          "h2"
+        ]
+      },
+      "fen": "6R1/8/8/8/4Q3/5n1k/7p/K7 w - - 0 1",
+      "solution_uci": "e4g4",
+      "solution_san": "Qg4",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qg4#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M16-06",
+      "source_file": "מט 1-6.pdf",
+      "position_number": 6,
+      "title": "Мат в 1 ход — מט 1-6, позиция 6",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "P": [
+          "f3"
+        ],
+        "K": [
+          "d2"
+        ],
+        "N": [
+          "e2"
+        ],
+        "Q": [
+          "b1"
+        ]
+      },
+      "black_pieces": {
+        "p": [
+          "f4"
+        ],
+        "k": [
+          "h3"
+        ]
+      },
+      "fen": "8/8/8/8/5p2/5P1k/3KN3/1Q6 w - - 0 1",
+      "solution_uci": "b1h1",
+      "solution_san": "Qh1",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qh1#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M16-07",
+      "source_file": "מט 1-6.pdf",
+      "position_number": 7,
+      "title": "Мат в 1 ход — מט 1-6, позиция 7",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "P": [
+          "h4",
+          "f3"
+        ],
+        "K": [
+          "d2"
+        ],
+        "Q": [
+          "b1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h5"
+        ],
+        "p": [
+          "f4"
+        ]
+      },
+      "fen": "8/8/8/7k/5p1P/5P2/3K4/1Q6 w - - 0 1",
+      "solution_uci": "b1h7",
+      "solution_san": "Qh7",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qh7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M16-08",
+      "source_file": "מט 1-6.pdf",
+      "position_number": 8,
+      "title": "Мат в 1 ход — מט 1-6, позиция 8",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "P": [
+          "g5",
+          "h4",
+          "c2",
+          "f2"
+        ],
+        "B": [
+          "b3"
+        ],
+        "K": [
+          "h2"
+        ],
+        "Q": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "a8",
+          "e2"
+        ],
+        "b": [
+          "c8"
+        ],
+        "k": [
+          "h8"
+        ],
+        "p": [
+          "a7",
+          "h7",
+          "b6",
+          "g6",
+          "e4"
+        ],
+        "q": [
+          "g4"
+        ]
+      },
+      "fen": "r1b4k/p6p/1p4p1/6P1/4p1qP/1B6/2P1rP1K/7Q w - - 0 1",
+      "solution_uci": "h1a1",
+      "solution_san": "Qa1",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qa1#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "M16-09",
+      "source_file": "מט 1-6.pdf",
+      "position_number": 9,
+      "title": "Мат в 1 ход — מט 1-6, позиция 9",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": null,
+      "white_pieces": {
+        "Q": [
+          "a8"
+        ],
+        "R": [
+          "d8"
+        ],
+        "P": [
+          "e5",
+          "g3",
+          "a2",
+          "f2"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "g8"
+        ],
+        "k": [
+          "h8"
+        ],
+        "n": [
+          "e7"
+        ],
+        "q": [
+          "f7"
+        ],
+        "p": [
+          "g7",
+          "b6",
+          "g6",
+          "c5"
+        ]
+      },
+      "fen": "Q2R2rk/4nqp1/1p4p1/2p1P3/8/6P1/P4P2/6K1 w - - 0 1",
+      "solution_uci": "a8h1",
+      "solution_san": "Qh1",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем и добавлен в базу; независимая проверка легальности позиции и решения Stockfish не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qh1#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DISC-01",
+      "source_file": "discovered check.pdf",
+      "position_number": 1,
+      "title": "Discovered check — position 1",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "R": [
+          "a8"
+        ],
+        "K": [
+          "e8"
+        ],
+        "P": [
+          "g6"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ]
+      },
+      "fen": "R3K2k/8/6P1/8/8/8/8/8 w - - 0 1",
+      "solution_uci": "e8f7",
+      "solution_san": "Kf7",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем; решение не проверено шахматным движком.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Kf7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DISC-02",
+      "source_file": "discovered check.pdf",
+      "position_number": 2,
+      "title": "Discovered check — position 2",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "R": [
+          "b8"
+        ],
+        "N": [
+          "e8"
+        ],
+        "K": [
+          "f7"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ]
+      },
+      "fen": "1R2N2k/5K2/8/8/8/8/8/8 w - - 0 1",
+      "solution_uci": "e8f6",
+      "solution_san": "Nf6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем; решение не проверено шахматным движком.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Nf6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DISC-03",
+      "source_file": "discovered check.pdf",
+      "position_number": 3,
+      "title": "Discovered check — position 3",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "R": [
+          "a8"
+        ],
+        "B": [
+          "e8"
+        ],
+        "K": [
+          "f6"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ]
+      },
+      "fen": "R3B2k/8/5K2/8/8/8/8/8 w - - 0 1",
+      "solution_uci": null,
+      "solution_san": "Bg6#",
+      "validated": false,
+      "notes": "FEN предоставлен пользователем; решение не проверено шахматным движком.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": false,
+        "mate_in_1_verified": false
+      },
+      "validation_status": "illegal_or_ambiguous",
+      "accepted_solutions": [
+        "Bg6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DISC-04",
+      "source_file": "discovered check.pdf",
+      "position_number": 4,
+      "title": "Discovered check — position 4",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "K": [
+          "h5"
+        ],
+        "B": [
+          "a2"
+        ],
+        "R": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h8"
+        ]
+      },
+      "fen": "7k/8/8/7K/8/8/B7/7R w - - 0 1",
+      "solution_uci": "h5g6",
+      "solution_san": "Kg6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем; решение не проверено шахматным движком.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Kg6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DISC-05",
+      "source_file": "discovered check.pdf",
+      "position_number": 5,
+      "title": "Discovered check — position 5",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "R": [
+          "h8"
+        ],
+        "B": [
+          "h7"
+        ],
+        "K": [
+          "f4"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h3"
+        ]
+      },
+      "fen": "7R/7B/8/8/5K2/7k/8/8 w - - 0 1",
+      "solution_uci": "h7e4",
+      "solution_san": "Be4",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем; решение не проверено шахматным движком.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Be4#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DISC-06",
+      "source_file": "discovered check.pdf",
+      "position_number": 6,
+      "title": "Discovered check — position 6",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "4+4",
+      "white_pieces": {
+        "R": [
+          "h3",
+          "g1"
+        ],
+        "B": [
+          "g2"
+        ],
+        "K": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "f8",
+          "b6"
+        ],
+        "k": [
+          "g8"
+        ],
+        "p": [
+          "f7"
+        ]
+      },
+      "fen": "5rk1/5p2/1r6/8/8/7R/6B1/6RK w - - 0 1",
+      "solution_uci": "g2c6",
+      "solution_san": "Bc6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем; решение не проверено шахматным движком.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Bc6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DISC-07",
+      "source_file": "discovered check.pdf",
+      "position_number": 7,
+      "title": "Discovered check — position 7",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+7",
+      "white_pieces": {
+        "R": [
+          "e5"
+        ],
+        "B": [
+          "a1"
+        ],
+        "K": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "b": [
+          "g8"
+        ],
+        "k": [
+          "h8"
+        ],
+        "p": [
+          "e7",
+          "h7",
+          "g6",
+          "b5"
+        ],
+        "r": [
+          "b6"
+        ]
+      },
+      "fen": "6bk/4p2p/1r4p1/1p2R3/8/8/8/B6K w - - 0 1",
+      "solution_uci": "e5e6",
+      "solution_san": "Re6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем; решение не проверено шахматным движком.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Re6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DISC-08",
+      "source_file": "discovered check.pdf",
+      "position_number": 8,
+      "title": "Discovered check — position 8",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "4+6",
+      "white_pieces": {
+        "N": [
+          "h5"
+        ],
+        "P": [
+          "b2"
+        ],
+        "K": [
+          "a1"
+        ],
+        "R": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "g8",
+          "b3"
+        ],
+        "k": [
+          "h8"
+        ],
+        "p": [
+          "g7",
+          "f4",
+          "g4"
+        ]
+      },
+      "fen": "6rk/6p1/8/7N/5pp1/1r6/1P6/K6R w - - 0 1",
+      "solution_uci": "h5g3",
+      "solution_san": "Ng3",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем; решение не проверено шахматным движком.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Ng3#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DISC-09",
+      "source_file": "discovered check.pdf",
+      "position_number": 9,
+      "title": "Discovered check — position 9",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "4+7",
+      "white_pieces": {
+        "N": [
+          "d4"
+        ],
+        "B": [
+          "c3"
+        ],
+        "P": [
+          "b2"
+        ],
+        "K": [
+          "b1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "c8"
+        ],
+        "b": [
+          "g8"
+        ],
+        "k": [
+          "h8"
+        ],
+        "p": [
+          "h7",
+          "g6",
+          "f5"
+        ],
+        "q": [
+          "a6"
+        ]
+      },
+      "fen": "2r3bk/7p/q5p1/5p2/3N4/2B5/1P6/1K6 w - - 0 1",
+      "solution_uci": "d4c6",
+      "solution_san": "Nc6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем; решение не проверено шахматным движком.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Nc6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DBL-01",
+      "source_file": "double check.pdf",
+      "position_number": 1,
+      "title": "Double check — position 1",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+4",
+      "white_pieces": {
+        "N": [
+          "e5"
+        ],
+        "B": [
+          "b2"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "f8",
+          "g8"
+        ],
+        "k": [
+          "h8"
+        ],
+        "p": [
+          "h7"
+        ]
+      },
+      "fen": "5rrk/7p/8/4N3/8/8/1B6/6K1 w - - 0 1",
+      "solution_uci": "e5g6",
+      "solution_san": "Ng6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Ng6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DBL-02",
+      "source_file": "double check.pdf",
+      "position_number": 2,
+      "title": "Double check — position 2",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+4",
+      "white_pieces": {
+        "N": [
+          "e5"
+        ],
+        "B": [
+          "b2"
+        ],
+        "K": [
+          "f1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "f8",
+          "g8"
+        ],
+        "k": [
+          "h8"
+        ],
+        "p": [
+          "h7"
+        ]
+      },
+      "fen": "5rrk/7p/8/4N3/8/8/1B6/5K2 w - - 0 1",
+      "solution_uci": "e5f7",
+      "solution_san": "Nf7",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Nf7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DBL-03",
+      "source_file": "double check.pdf",
+      "position_number": 3,
+      "title": "Double check — position 3",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "4+3",
+      "white_pieces": {
+        "N": [
+          "g6"
+        ],
+        "K": [
+          "e1"
+        ],
+        "R": [
+          "g1",
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "b": [
+          "f8"
+        ],
+        "k": [
+          "g8"
+        ],
+        "q": [
+          "f7"
+        ]
+      },
+      "fen": "5bk1/5q2/6N1/8/8/8/8/4K1RR w K - 0 1",
+      "solution_uci": "g6e7",
+      "solution_san": "Ne7",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Ne7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DBL-04",
+      "source_file": "double check.pdf",
+      "position_number": 4,
+      "title": "Double check — position 4",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "4+5",
+      "white_pieces": {
+        "R": [
+          "c4"
+        ],
+        "B": [
+          "a2"
+        ],
+        "P": [
+          "g2"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ],
+        "b": [
+          "b7"
+        ],
+        "q": [
+          "g7"
+        ],
+        "p": [
+          "h7"
+        ],
+        "r": [
+          "b2"
+        ]
+      },
+      "fen": "6k1/1b4qp/8/8/2R5/8/Br4P1/6K1 w - - 0 1",
+      "solution_uci": "c4c8",
+      "solution_san": "Rc8",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rc8#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DBL-05",
+      "source_file": "double check.pdf",
+      "position_number": 5,
+      "title": "Double check — position 5",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "6+5",
+      "white_pieces": {
+        "P": [
+          "f6",
+          "g2",
+          "h2"
+        ],
+        "B": [
+          "h6"
+        ],
+        "R": [
+          "h5"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "a8"
+        ],
+        "q": [
+          "g8"
+        ],
+        "k": [
+          "h8"
+        ],
+        "p": [
+          "f7",
+          "g6"
+        ]
+      },
+      "fen": "r5qk/5p2/5PpB/7R/8/8/6PP/6K1 w - - 0 1",
+      "solution_uci": "h6g7",
+      "solution_san": "Bg7",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Bg7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DBL-06",
+      "source_file": "double check.pdf",
+      "position_number": 6,
+      "title": "Double check — position 6",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "4+2",
+      "white_pieces": {
+        "P": [
+          "b4"
+        ],
+        "K": [
+          "b2"
+        ],
+        "R": [
+          "e2"
+        ],
+        "B": [
+          "f1"
+        ]
+      },
+      "black_pieces": {
+        "p": [
+          "d5"
+        ],
+        "k": [
+          "c4"
+        ]
+      },
+      "fen": "8/8/8/3p4/1Pk5/8/1K2R3/5B2 w - - 0 1",
+      "solution_uci": "e2e4",
+      "solution_san": "Re4",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Re4#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DBL-07",
+      "source_file": "double check.pdf",
+      "position_number": 7,
+      "title": "Double check — position 7",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "13+14",
+      "white_pieces": {
+        "P": [
+          "a2",
+          "b2",
+          "c2",
+          "f2",
+          "g2",
+          "h2"
+        ],
+        "B": [
+          "e2",
+          "c1"
+        ],
+        "R": [
+          "a1",
+          "e1"
+        ],
+        "N": [
+          "b1"
+        ],
+        "Q": [
+          "d1"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "a8",
+          "h8"
+        ],
+        "q": [
+          "d8"
+        ],
+        "k": [
+          "e8"
+        ],
+        "b": [
+          "f8",
+          "b7"
+        ],
+        "p": [
+          "a7",
+          "c7",
+          "f7",
+          "g7",
+          "h7",
+          "b6",
+          "d5"
+        ],
+        "n": [
+          "f6"
+        ]
+      },
+      "fen": "r2qkb1r/pbp2ppp/1p3n2/3p4/8/8/PPP1BPPP/RNBQR1K1 w kq - 0 1",
+      "solution_uci": "e2b5",
+      "solution_san": "Bb5",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Bb5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DBL-08",
+      "source_file": "double check.pdf",
+      "position_number": 8,
+      "title": "Double check — position 8",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "13+15",
+      "white_pieces": {
+        "P": [
+          "d4",
+          "a2",
+          "b2",
+          "f2",
+          "g2",
+          "h2"
+        ],
+        "N": [
+          "c3",
+          "f3"
+        ],
+        "B": [
+          "e3"
+        ],
+        "R": [
+          "a1",
+          "f1"
+        ],
+        "Q": [
+          "e1"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "a8",
+          "h8"
+        ],
+        "q": [
+          "d8"
+        ],
+        "b": [
+          "f8",
+          "f5"
+        ],
+        "p": [
+          "a7",
+          "b7",
+          "c7",
+          "f7",
+          "g7",
+          "d6",
+          "h6"
+        ],
+        "n": [
+          "d7",
+          "c2"
+        ],
+        "k": [
+          "e7"
+        ]
+      },
+      "fen": "r2q1b1r/pppnkpp1/3p3p/5b2/3P4/2N1BN2/PPn2PPP/R3QRK1 w - - 0 1",
+      "solution_uci": "e3g5",
+      "solution_san": "Bg5",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Bg5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "DBL-09",
+      "source_file": "double check.pdf",
+      "position_number": 9,
+      "title": "Double check — position 9",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "13+15",
+      "white_pieces": {
+        "N": [
+          "e4"
+        ],
+        "B": [
+          "h4",
+          "d3"
+        ],
+        "P": [
+          "a2",
+          "b2",
+          "c2",
+          "f2",
+          "g2",
+          "h2"
+        ],
+        "Q": [
+          "e2"
+        ],
+        "R": [
+          "a1",
+          "e1"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "a8",
+          "h8"
+        ],
+        "k": [
+          "e8"
+        ],
+        "b": [
+          "f8",
+          "g4"
+        ],
+        "p": [
+          "a7",
+          "b7",
+          "f7",
+          "g7",
+          "c6",
+          "d5",
+          "h5"
+        ],
+        "q": [
+          "c7"
+        ],
+        "n": [
+          "d7",
+          "f5"
+        ]
+      },
+      "fen": "r3kb1r/ppqn1pp1/2p5/3p1n1p/4N1bB/3B4/PPP1QPPP/R3R1K1 w kq - 0 1",
+      "solution_uci": "e4d6",
+      "solution_san": "Nd6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Nd6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "PIN-01",
+      "source_file": "pin.pdf",
+      "position_number": 1,
+      "title": "Pin — position 1",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+4",
+      "white_pieces": {
+        "Q": [
+          "f4"
+        ],
+        "B": [
+          "a1"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "g8"
+        ],
+        "k": [
+          "h8"
+        ],
+        "p": [
+          "g7",
+          "h6"
+        ]
+      },
+      "fen": "6rk/6p1/7p/8/5Q2/8/8/B5K1 w - - 0 1",
+      "solution_uci": "f4h6",
+      "solution_san": "Qxh6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qxh6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "PIN-02",
+      "source_file": "pin.pdf",
+      "position_number": 2,
+      "title": "Pin — position 2",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "5+4",
+      "white_pieces": {
+        "Q": [
+          "c2"
+        ],
+        "P": [
+          "h2"
+        ],
+        "B": [
+          "a1",
+          "b1"
+        ],
+        "K": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "g8"
+        ],
+        "k": [
+          "h8"
+        ],
+        "q": [
+          "g7"
+        ],
+        "p": [
+          "h7"
+        ]
+      },
+      "fen": "6rk/6qp/8/8/8/8/2Q4P/BB5K w - - 0 1",
+      "solution_uci": "c2h7",
+      "solution_san": "Qxh7",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qxh7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "PIN-03",
+      "source_file": "pin.pdf",
+      "position_number": 3,
+      "title": "Pin — position 3",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+4",
+      "white_pieces": {
+        "R": [
+          "a8"
+        ],
+        "K": [
+          "h6"
+        ],
+        "B": [
+          "b2"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "g8"
+        ],
+        "k": [
+          "h8"
+        ],
+        "n": [
+          "g7"
+        ],
+        "p": [
+          "h7"
+        ]
+      },
+      "fen": "R5rk/6np/7K/8/8/8/1B6/8 w - - 0 1",
+      "solution_uci": "b2g7",
+      "solution_san": "Bxg7",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Bxg7#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "PIN-04",
+      "source_file": "pin.pdf",
+      "position_number": 4,
+      "title": "Pin — position 4",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+5",
+      "white_pieces": {
+        "N": [
+          "e5"
+        ],
+        "K": [
+          "g2"
+        ],
+        "R": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "f8",
+          "g8"
+        ],
+        "k": [
+          "h8"
+        ],
+        "p": [
+          "g7",
+          "h7"
+        ]
+      },
+      "fen": "5rrk/6pp/8/4N3/8/8/6K1/7R w - - 0 1",
+      "solution_uci": "e5g6",
+      "solution_san": "Ng6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Ng6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "PIN-05",
+      "source_file": "pin.pdf",
+      "position_number": 5,
+      "title": "Pin — position 5",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "9+11",
+      "white_pieces": {
+        "R": [
+          "a5",
+          "f1"
+        ],
+        "P": [
+          "c4",
+          "b2",
+          "f2",
+          "g2"
+        ],
+        "B": [
+          "c3",
+          "b1"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "b8",
+          "g8"
+        ],
+        "p": [
+          "a7",
+          "f7",
+          "d6",
+          "e6",
+          "g6"
+        ],
+        "n": [
+          "d7"
+        ],
+        "b": [
+          "e7",
+          "c6"
+        ],
+        "k": [
+          "h7"
+        ]
+      },
+      "fen": "1r4r1/p2nbp1k/2bpp1p1/R7/2P5/2B5/1P3PP1/1B3RK1 w - - 0 1",
+      "solution_uci": "a5h5",
+      "solution_san": "Rh5",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rh5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "PIN-06",
+      "source_file": "pin.pdf",
+      "position_number": 6,
+      "title": "Pin — position 6",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "15+15",
+      "white_pieces": {
+        "N": [
+          "e4",
+          "g1"
+        ],
+        "P": [
+          "a2",
+          "b2",
+          "c2",
+          "d2",
+          "f2",
+          "g2",
+          "h2"
+        ],
+        "Q": [
+          "e2"
+        ],
+        "R": [
+          "a1",
+          "h1"
+        ],
+        "B": [
+          "c1",
+          "f1"
+        ],
+        "K": [
+          "e1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "a8",
+          "h8"
+        ],
+        "b": [
+          "c8",
+          "f8"
+        ],
+        "q": [
+          "d8"
+        ],
+        "k": [
+          "e8"
+        ],
+        "p": [
+          "a7",
+          "b7",
+          "e7",
+          "f7",
+          "g7",
+          "h7",
+          "c6"
+        ],
+        "n": [
+          "d7",
+          "f6"
+        ]
+      },
+      "fen": "r1bqkb1r/pp1npppp/2p2n2/8/4N3/8/PPPPQPPP/R1B1KBNR w KQkq - 0 1",
+      "solution_uci": "e4d6",
+      "solution_san": "Nd6",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Nd6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "PIN-07",
+      "source_file": "pin.pdf",
+      "position_number": 7,
+      "title": "Pin — position 7",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "4+2",
+      "white_pieces": {
+        "R": [
+          "g8",
+          "a3"
+        ],
+        "Q": [
+          "e5"
+        ],
+        "K": [
+          "a1"
+        ]
+      },
+      "black_pieces": {
+        "n": [
+          "f5"
+        ],
+        "k": [
+          "h5"
+        ]
+      },
+      "fen": "6R1/8/8/4Qn1k/8/R7/8/K7 w - - 0 1",
+      "solution_uci": "a3h3",
+      "solution_san": "Rh3",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Rh3#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "PIN-08",
+      "source_file": "pin.pdf",
+      "position_number": 8,
+      "title": "Pin — position 8",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "5+2",
+      "white_pieces": {
+        "R": [
+          "a7"
+        ],
+        "P": [
+          "g7"
+        ],
+        "N": [
+          "g4"
+        ],
+        "B": [
+          "a2"
+        ],
+        "K": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "g8"
+        ],
+        "n": [
+          "d5"
+        ]
+      },
+      "fen": "6k1/R5P1/8/3n4/6N1/8/B7/7K w - - 0 1",
+      "solution_uci": "g4h6",
+      "solution_san": "Nf6#",
+      "validated": false,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": false
+      },
+      "validation_status": "not_mate_or_invalid_position",
+      "accepted_solutions": [
+        "Nf6#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "PIN-09",
+      "source_file": "pin.pdf",
+      "position_number": 9,
+      "title": "Pin — position 9",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "5+2",
+      "white_pieces": {
+        "R": [
+          "a7"
+        ],
+        "P": [
+          "g7",
+          "g5"
+        ],
+        "B": [
+          "b3"
+        ],
+        "K": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "n": [
+          "e7"
+        ],
+        "k": [
+          "h7"
+        ]
+      },
+      "fen": "8/R3n1Pk/8/6P1/8/1B6/8/7K w - - 0 1",
+      "solution_uci": "g7g8q",
+      "solution_san": "g8Q",
+      "validated": true,
+      "notes": "FEN предоставлен пользователем. Проверка хода и мата движком не проводилась.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "g8=Q#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "MIX-01",
+      "source_file": "mix.pdf",
+      "position_number": 1,
+      "title": "Mix — position 1",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "5+4",
+      "white_pieces": {
+        "P": [
+          "g2"
+        ],
+        "B": [
+          "c6"
+        ],
+        "R": [
+          "d1"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "d8"
+        ],
+        "p": [
+          "c7"
+        ],
+        "b": [
+          "d6"
+        ],
+        "q": [
+          "a3"
+        ]
+      },
+      "fen": "3k4/2p2P2/2Bb4/8/8/q7/6P1/3R2K1 w - - 0 1",
+      "solution_uci": "f7f8q",
+      "solution_san": "f8Q",
+      "validated": true,
+      "notes": "FEN и решение внесены по данным пользователя; решение указано пользователем как проверенное. Независимая проверка движком не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true,
+        "solution_reported_checked_by_user": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "f8=Q#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "MIX-02",
+      "source_file": "mix.pdf",
+      "position_number": 2,
+      "title": "Mix — position 2",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "5+4",
+      "white_pieces": {
+        "R": [
+          "a8"
+        ],
+        "P": [
+          "g2"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "q": [
+          "e7"
+        ],
+        "k": [
+          "f7"
+        ],
+        "r": [
+          "g7"
+        ],
+        "p": [
+          "f6"
+        ]
+      },
+      "fen": "R7/4qkrP/5p2/5P2/8/8/6P1/6K1 w - - 0 1",
+      "solution_uci": "h7h8n",
+      "solution_san": "h8N",
+      "validated": true,
+      "notes": "FEN и решение внесены по данным пользователя; решение указано пользователем как проверенное. Независимая проверка движком не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true,
+        "solution_reported_checked_by_user": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "h8=N#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "MIX-03",
+      "source_file": "mix.pdf",
+      "position_number": 3,
+      "title": "Mix — position 3",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "5+2",
+      "white_pieces": {
+        "Q": [
+          "b8"
+        ],
+        "N": [
+          "h8"
+        ],
+        "P": [
+          "f7"
+        ],
+        "K": [
+          "d4"
+        ]
+      },
+      "black_pieces": {
+        "n": [
+          "h7"
+        ],
+        "k": [
+          "f6"
+        ]
+      },
+      "fen": "1Q5N/4PP1n/5k2/8/3K4/8/8/8 w - - 0 1",
+      "solution_uci": "b8e5",
+      "solution_san": "Qe5",
+      "validated": true,
+      "notes": "FEN и решение внесены по данным пользователя; решение указано пользователем как проверенное. Независимая проверка движком не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true,
+        "solution_reported_checked_by_user": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Qe5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "MIX-04",
+      "source_file": "mix.pdf",
+      "position_number": 4,
+      "title": "Mix — position 4",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "5+2",
+      "white_pieces": {
+        "N": [
+          "h8"
+        ],
+        "P": [
+          "f7"
+        ],
+        "K": [
+          "d4"
+        ],
+        "Q": [
+          "h2"
+        ]
+      },
+      "black_pieces": {
+        "n": [
+          "f8"
+        ],
+        "k": [
+          "g7"
+        ]
+      },
+      "fen": "5n1N/4PPk1/8/8/3K4/8/7Q/8 w - - 0 1",
+      "solution_uci": "e7e8n",
+      "solution_san": "e8N",
+      "validated": true,
+      "notes": "FEN и решение внесены по данным пользователя; решение указано пользователем как проверенное. Независимая проверка движком не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true,
+        "solution_reported_checked_by_user": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "e8=N#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "MIX-05",
+      "source_file": "mix.pdf",
+      "position_number": 5,
+      "title": "Mix — position 5",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "4+2",
+      "white_pieces": {
+        "P": [
+          "g7"
+        ],
+        "N": [
+          "e6"
+        ],
+        "B": [
+          "c2"
+        ],
+        "K": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "h6"
+        ],
+        "n": [
+          "h5"
+        ]
+      },
+      "fen": "8/6P1/4N2k/7n/8/8/2B5/7K w - - 0 1",
+      "solution_uci": "g7g8n",
+      "solution_san": "g8N",
+      "validated": true,
+      "notes": "FEN и решение внесены по данным пользователя; решение указано пользователем как проверенное. Независимая проверка движком не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true,
+        "solution_reported_checked_by_user": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "g8=N#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "MIX-06",
+      "source_file": "mix.pdf",
+      "position_number": 6,
+      "title": "Mix — position 6",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "5+2",
+      "white_pieces": {
+        "R": [
+          "a7"
+        ],
+        "P": [
+          "g7"
+        ],
+        "B": [
+          "c1"
+        ],
+        "K": [
+          "g1"
+        ]
+      },
+      "black_pieces": {
+        "n": [
+          "e7"
+        ],
+        "k": [
+          "h7"
+        ]
+      },
+      "fen": "8/R3n1Pk/8/8/8/1B6/8/2B3K1 w - - 0 1",
+      "solution_uci": "g7g8q",
+      "solution_san": "g8Q",
+      "validated": true,
+      "notes": "FEN и решение внесены по данным пользователя; решение указано пользователем как проверенное. Независимая проверка движком не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true,
+        "solution_reported_checked_by_user": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "g8=Q#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "MIX-07",
+      "source_file": "mix.pdf",
+      "position_number": 7,
+      "title": "Mix — position 7",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "4+5",
+      "white_pieces": {
+        "R": [
+          "g1"
+        ],
+        "B": [
+          "g2"
+        ],
+        "K": [
+          "h1"
+        ]
+      },
+      "black_pieces": {
+        "r": [
+          "d7"
+        ],
+        "k": [
+          "g8"
+        ],
+        "q": [
+          "f7"
+        ],
+        "p": [
+          "d5"
+        ]
+      },
+      "fen": "5rk1/3r1q2/8/3p4/8/7R/6B1/6RK w - - 0 1",
+      "solution_uci": "g2d5",
+      "solution_san": "Bxd5",
+      "validated": true,
+      "notes": "FEN и решение внесены по данным пользователя; решение указано пользователем как проверенное. Независимая проверка движком не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true,
+        "solution_reported_checked_by_user": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "Bxd5#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "MIX-08",
+      "source_file": "mix.pdf",
+      "position_number": 8,
+      "title": "Mix — position 8",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "3+1",
+      "white_pieces": {
+        "R": [
+          "h1"
+        ],
+        "K": [
+          "e1"
+        ]
+      },
+      "black_pieces": {
+        "k": [
+          "a1"
+        ]
+      },
+      "fen": "8/8/8/8/8/8/7R/k3K2R w K - 0 1",
+      "solution_uci": "e1g1",
+      "solution_san": "O-O",
+      "validated": true,
+      "notes": "FEN и решение внесены по данным пользователя; решение указано пользователем как проверенное. Независимая проверка движком не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true,
+        "solution_reported_checked_by_user": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "O-O#"
+      ],
+      "app_status": "READY"
+    },
+    {
+      "id": "MIX-09",
+      "source_file": "mix.pdf",
+      "position_number": 9,
+      "title": "Mix — position 9",
+      "objective": "mate_in_1",
+      "side_to_move": "white",
+      "material_count_label": "4+2",
+      "white_pieces": {
+        "Q": [
+          "e5"
+        ],
+        "P": [
+          "c3"
+        ],
+        "R": [
+          "a1"
+        ],
+        "K": [
+          "e1"
+        ]
+      },
+      "black_pieces": {
+        "p": [
+          "c4"
+        ],
+        "k": [
+          "d3"
+        ]
+      },
+      "fen": "8/8/8/4Q3/2p5/2Pk4/8/R3K3 w Q - 0 1",
+      "solution_uci": "e1c1",
+      "solution_san": "O-O-O",
+      "validated": true,
+      "notes": "FEN и решение внесены по данным пользователя; решение указано пользователем как проверенное. Независимая проверка движком не выполнена.",
+      "engine_validation": {
+        "engine": "Stockfish",
+        "status": "rules_verified_no_stockfish",
+        "position_available": true,
+        "legal_solution_verified": true,
+        "mate_in_1_verified": true,
+        "solution_reported_checked_by_user": true
+      },
+      "validation_status": "confirmed_by_rules",
+      "accepted_solutions": [
+        "O-O-O#"
+      ],
+      "app_status": "READY"
+    }
+  ],
+  "gameplay": {
+    "allow_retry": true,
+    "unlock_next_puzzle_after_correct_solution": true,
+    "puzzle_order": "left_to_right_then_top_to_bottom",
+    "incorrect_answer_behavior": "allow_retry_without_unlocking_next",
+    "completion_condition": "correct_mate_in_1_move"
+  },
+  "sources": [
+    {
+      "file": "מט 1-3.pdf",
+      "positions": 9,
+      "status": "9/9 positions have FEN; 0/9 engine-validated; release blocked"
+    },
+    {
+      "file": "מט 1-4.pdf",
+      "positions": 9,
+      "status": "9/9 positions have FEN; 0/9 engine-validated; release blocked"
+    },
+    {
+      "file": "מט 1-5.pdf",
+      "positions": 9,
+      "status": "0/9 positions have FEN; 0/9 engine-validated; release blocked"
+    },
+    {
+      "file": "מט 1-6.pdf",
+      "positions": 9,
+      "status": "0/9 positions have FEN; 0/9 engine-validated; release blocked"
+    },
+    {
+      "file": "discovered check.pdf",
+      "positions": 9,
+      "status": "0/9 positions have FEN; 0/9 engine-validated; release blocked"
+    },
+    {
+      "file": "double check.pdf",
+      "positions": 9,
+      "status": "0/9 positions have FEN; 0/9 engine-validated; release blocked"
+    },
+    {
+      "file": "pin.pdf",
+      "positions": 9,
+      "status": "0/9 positions have FEN; 0/9 engine-validated; release blocked"
+    },
+    {
+      "file": "mix.pdf",
+      "positions": 9,
+      "status": "0/9 positions have FEN; 0/9 engine-validated; release blocked"
+    }
+  ],
+  "validation_summary": {
+    "total_puzzles": 90,
+    "fen_present": 90,
+    "fen_missing": 0,
+    "engine_verified": 0,
+    "mix_fen_added": 9,
+    "note": "Все FEN внесены. Проверка Stockfish не проводилась.",
+    "discovered_check_fen_added": 9,
+    "double_check_fen_added": 9,
+    "pin_fen_added": 9,
+    "rules_validation_counts": {
+      "confirmed_by_rules": 82,
+      "illegal_or_ambiguous": 5,
+      "not_mate_or_invalid_position": 3
+    }
+  }
+}
