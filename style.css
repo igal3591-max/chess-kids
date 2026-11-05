@@ -485,5 +485,363 @@ h2 {
         aspect-ratio: 1 / 1;
         margin: 8px auto;
     }
+}/* Version 1.1 - Larger mobile chessboard */
+/* Version 1.1 - Larger mobile chessboard */
+
+@media (max-width: 600px) {
+
+    #chessboard {
+        width: min(98vw, 54dvh);
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 6px auto;
+    }/* Version 1.1 - Classic cburnett chess pieces */
+
+.chess-piece {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+}/* Puzzle group selection button */
+
+#group-button {
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #cccccc;
+    border-radius: 12px;
+    padding: 8px 14px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 6px;
+}
+
+#group-button:hover {
+    background-color: #e8f8dc;
+    border-color: #58cc02;
+}
+
+@media (max-width: 600px) {
+    #group-button {
+        font-size: 14px;
+        padding: 8px 10px;
+        margin: 5px;
+    }
+}/* Puzzle group selection dialog */
+
+.group-dialog[hidden] {
+    display: none !important;
+}
+
+.group-dialog {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 15px;
+}
+
+.group-dialog-content {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    width: 100%;
+    max-width: 360px;
+    max-height: 85dvh;
+    overflow-y: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#group-dialog-title {
+    margin: 0 0 15px;
+    font-size: 22px;
+}
+
+#group-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#group-cancel {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #cccccc;
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+}/* Improved puzzle group selection */
+
+#group-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+#group-list button {
+    width: 100%;
+    padding: 12px 10px;
+    border: 2px solid #58cc02;
+    border-radius: 12px;
+    background: #f5fff0;
+    color: #253b1e;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    cursor: pointer;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+#group-list button:hover {
+    background: #dff7d2;
+}
+
+#group-list button:active {
+    background: #b8ed9d;
+}
+
+@media (max-width: 600px) {
+    .group-dialog-content {
+        width: 100%;
+        max-width: 340px;
+        padding: 15px;
+    }
+
+    #group-list button {
+        font-size: 15px;
+        padding: 11px 8px;
+    }
+}/* Desktop: fit the chessboard to screen height */
+
+@media (min-width: 601px) {
+
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    main {
+        margin: 8px auto;
+        padding: 8px;
+    }
+
+    main h2 {
+        margin: 6px 0;
+    }
+
+    #progress {
+        margin: 6px auto;
+    }
+
+    .progress-container {
+        margin: 6px auto 10px;
+    }
+
+    #restart-button,
+    #group-button {
+        margin-bottom: 8px;
+    }
+
+    #chessboard {
+        width: min(90vw, 52dvh, 480px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 10px auto;
+    }
+}/* Stage 1 completion screen */
+
+#completion-screen[hidden] {
+    display: none !important;
+}
+
+#completion-screen {
+    width: min(92vw, 500px);
+    margin: 20px auto;
+    text-align: center;
+}
+
+.completion-content {
+    background: linear-gradient(160deg, #ffffff, #eaffdf);
+    border: 3px solid #58cc02;
+    border-radius: 24px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.completion-trophy {
+    font-size: 72px;
+    margin-bottom: 15px;
+}
+
+#completion-title {
+    color: #287a00;
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+#completion-description {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.completion-score {
+    display: inline-block;
+    background: #58cc02;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 18px;
+    margin: 15px auto;
+}
+
+#completion-next-stage {
+    font-size: 20px;
+    font-weight: bold;
+    color: #315b16;
+}
+
+#completion-groups-button {
+    background: #58cc02;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 14px 22px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#completion-groups-button:hover {
+    background: #46a800;
+}
+
+@media (max-width: 600px) {
+    .completion-content {
+        padding: 20px 12px;
+    }
+
+    .completion-trophy {
+        font-size: 56px;
+    }
+
+    #completion-title {
+        font-size: 23px;
+    }
+
+    #completion-description,
+    #completion-next-stage {
+        font-size: 17px;
+    }
+}/* Hide chessboard when completion screen is visible */
+
+#chessboard[hidden] {
+    display: none !important;
 }
     
+/* Welcome screen */
+
+#welcome-screen[hidden] {
+    display: none !important;
+}
+
+#welcome-screen {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    text-align: center;
+    background: #e8f5e9;
+}
+
+#welcome-screen img {
+    width: 180px;
+    height: 180px;
+    max-width: 55vw;
+    object-fit: contain;
+    border-radius: 24px;
+}
+
+#welcome-title {
+    margin: 0;
+    color: #245c32;
+    font-size: 36px;
+}
+
+#welcome-subtitle {
+    margin: 0;
+    color: #397447;
+    font-size: 24px;
+}
+
+#welcome-start-button {
+    margin-top: 15px;
+    padding: 14px 48px;
+
+    border: none;
+    border-radius: 16px;
+
+    background: #4caf50;
+    color: white;
+
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#welcome-start-button:hover {
+    background: #388e3c;
+}
+
+@media (max-width: 600px) {
+    #welcome-title {
+        font-size: 30px;
+    }
+
+    #welcome-subtitle {
+        font-size: 21px;
+    }
+
+    #welcome-start-button {
+        font-size: 22px;
+    }
+}
+/* Welcome screen language button */
+
+#welcome-language-button {
+    padding: 10px 28px;
+    border: 2px solid #4caf50;
+    border-radius: 14px;
+    background: white;
+    color: #245c32;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#welcome-language-button:hover {
+    background: #e0f2e3;
+}   

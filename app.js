@@ -4,9 +4,15 @@ const boardElement = document.getElementById("chessboard");
 const languageButton = document.getElementById("language-button");
 const messageElement = document.getElementById("message");
 
-let currentLanguage = localStorage.getItem("chessLanguage") || "he";
+let currentLanguage = localStorage.getItem("chessLanguage") || "en";
 
 let puzzles = [];
+
+let allPuzzles = [];
+const SELECTED_GROUP_KEY = "chessKidsSelectedGroup";
+
+let selectedGroup =
+    localStorage.getItem(SELECTED_GROUP_KEY) || "all";
 let currentPuzzleIndex = 0;
 let game = new Chess();
 let selectedSquare = null;let possibleMoves = [];// Dragging state
@@ -36,8 +42,15 @@ const translations = {
         retry: "נסה שוב!",
         finished: "אלוף השחמט!",
         loadError: "לא ניתן לטעון את התרגילים",
-        button: "English"
-    },
+        button: "English",
+        groupButton: "בחירת קבוצת תרגילים",
+        completionTitle: "כל הכבוד! 🏆",
+completionDescription: "השלמתם בהצלחה את כל 90 התרגילים!",
+completionGroupsButton: "חזרה לבחירת קבוצות",
+completionNextStage: "השלב הבא: מט בשני מהלכים!",
+},completionTitle: "כל הכבוד! 🏆",
+completionDescription: "השלמתם בהצלחה את כל 90 התרגילים!",
+completionGroupsButton: "חזרה לבחירת קבוצות",
     en: {
         title: "Chess Puzzles for Beginners!",
         instruction: "Find Mate in One",
@@ -47,13 +60,29 @@ const translations = {
         retry: "Try Again!",
         finished: "Chess Champion!",
         loadError: "Unable to load puzzles",
-        button: "עברית"
-    }
+     button: "עברית",
+groupButton: "Choose Puzzle Group",
+completionTitle: "Congratulations! 🏆",
+completionDescription: "You have successfully completed all 90 puzzles!",
+completionGroupsButton: "Back to Puzzle Groups",
+completionNextStage: "Next stage: Mate in Two Moves!"
+  }
 };
 
 function updateLanguage() {
     const t = translations[currentLanguage];
+const isHebrew = currentLanguage === "he";
 
+document.getElementById("welcome-title").textContent =
+    isHebrew ? "לומדים שחמט" : "Learn Chess";
+
+document.getElementById("welcome-subtitle").textContent =
+    isHebrew ? "תרגילי מט" : "Checkmate Puzzles";
+
+document.getElementById("welcome-start-button").textContent =
+    isHebrew ? "התחל" : "Start";
+    document.getElementById("welcome-language-button").textContent =
+    isHebrew ? "English" : "עברית";
     document.documentElement.lang = currentLanguage;
     document.documentElement.dir =
         currentLanguage === "he" ? "rtl" : "ltr";
@@ -62,8 +91,12 @@ function updateLanguage() {
     document.getElementById("instruction").textContent = t.instruction;
 
     languageButton.textContent = t.button;
-
-    updateProgress();
+document.getElementById("group-button").textContent = t.groupButton;
+document.getElementById("completion-title").textContent = t.completionTitle;
+document.getElementById("completion-description").textContent = t.completionDescription;
+document.getElementById("completion-groups-button").textContent = t.completionGroupsButton;
+document.getElementById("completion-next-stage").textContent = t.completionNextStage;   
+updateProgress();
 }
 
 function updateProgress() {
@@ -145,18 +178,19 @@ if (possibleMoves.includes(squareName)) {
 
             const piece = board[row][col];
 
-            if (piece) {
-                const symbol =
-                    piece.color === "w"
-                        ? piece.type.toUpperCase()
-                        : piece.type;
+ if (piece) {
+    const color = piece.color;
+    const type = piece.type.toUpperCase();
 
-                const pieceElement = document.createElement("span");
-pieceElement.className = "chess-piece";
-pieceElement.textContent = pieces[symbol];
+    const pieceElement = document.createElement("img");
 
-square.appendChild(pieceElement);
-            }
+    pieceElement.className = "chess-piece";
+    pieceElement.src = `./pieces/${color}${type}.svg`;
+    pieceElement.alt = `${color}${type}`;
+    pieceElement.draggable = false;
+
+    square.appendChild(pieceElement);
+}
 
             square.addEventListener("click", () => {
                 handleSquareClick(squareName);
@@ -261,24 +295,67 @@ if (promotionMoves.length > 0) {
         drawBoard();
         showMessage("success");
 
-        setTimeout(() => {
-            currentPuzzleIndex++;
-saveProgress();
-            if (currentPuzzleIndex >= puzzles.length) {
-                showMessage("finished");
-                return;
-            }
-
-            loadPuzzle();
-        }, 1500);
+       setTimeout(() => {
+    advanceToNextPuzzle();
+}, 1500);
 
     } else {
         showMessage("retry");
         drawBoard();
     }
+}function areAllGroupsCompleted() {
+    const groups = ["1", "2", "3", "4", "5"];
+
+    return groups.every(group => {
+        const key = `${PROGRESS_KEY}_${group}`;
+        const completed = Number(localStorage.getItem(key) || 0);
+        const total = getPuzzlesByGroup(group).length;
+
+        return total > 0 && completed >= total;
+    });
+}
+function advanceToNextPuzzle() {
+    currentPuzzleIndex++;
+    saveProgress();
+
+   if (currentPuzzleIndex >= puzzles.length) {
+    if (areAllGroupsCompleted()) {
+        showMessage("finished");
+        console.log("All 90 puzzles completed!");
+        showCompletionScreen();
+    } else {
+        showMessage("finished");
+        console.log("Current puzzle group completed.");
+    }
+    return;
 }
 
+    loadPuzzle();
+}
+function showCompletionScreen() {
+    const completionScreen =
+        document.getElementById("completion-screen");
+
+    const chessboard =
+        document.getElementById("chessboard");
+
+    if (!completionScreen || !chessboard) {
+        return;
+    }
+
+    chessboard.hidden = true;
+    completionScreen.hidden = false;
+}
 function loadPuzzle() {
+        if (currentPuzzleIndex >= puzzles.length) {
+        showMessage("finished");
+
+        if (areAllGroupsCompleted()) {
+            showCompletionScreen();
+        }
+
+        return;
+    }
     const puzzle = puzzles[currentPuzzleIndex];
 
     if (!puzzle || !puzzle.fen) {
@@ -302,7 +379,45 @@ puzzleCompleted = false;
 
     updateProgress();
     drawBoard();
+}// Get puzzle groups from the database
+ function getPuzzleGroups() {
+    return ["1", "2", "3", "4", "5"];
 }
+
+function getPuzzlesByGroup(group) {
+    if (group === "all") {
+        return allPuzzles;
+    }
+
+    return allPuzzles.filter(puzzle => {
+        const source = (puzzle.source_file || "").toLowerCase();
+        const match = source.match(/\d+-\d+/);
+        const number = match ? match[0] : "";
+
+        switch (group) {
+            case "1":
+                return number === "1-1" || number === "1-2";
+
+            case "2":
+                return number === "1-3" || number === "1-4";
+
+            case "3":
+                return number === "1-5" || number === "1-6";
+
+            case "4":
+                return source === "discovered check.pdf" ||
+                       source === "double check.pdf";
+
+            case "5":
+                return source === "pin.pdf" ||
+                       source === "mix.pdf";
+
+            default:
+                return false;
+        }
+    });
+}
+ 
 
 async function loadDatabase() {
     try {
@@ -313,13 +428,19 @@ async function loadDatabase() {
         }
 
         const data = await response.json();
-
-        puzzles = data.puzzles.filter(
+allPuzzles = data.puzzles.filter(     
             puzzle =>
                 puzzle.app_status === "READY" &&
                 puzzle.fen
         );
+const validGroups = ["all", ...getPuzzleGroups()];
 
+if (!validGroups.includes(selectedGroup)) {
+    selectedGroup = "all";
+    localStorage.setItem(SELECTED_GROUP_KEY, selectedGroup);
+}
+
+puzzles = getPuzzlesByGroup(selectedGroup);
         if (puzzles.length === 0) {
             throw new Error("No puzzles available");
         }
@@ -342,7 +463,11 @@ languageButton.addEventListener("click", () => {
 
     updateLanguage();
 });
-
+// Welcome screen language button
+document.getElementById("welcome-language-button")
+    .addEventListener("click", () => {
+        languageButton.click();
+    });
 // Start application
 updateLanguage();
 loadDatabase();// Chess piece dragging — mouse and touch
@@ -554,17 +679,11 @@ document.querySelectorAll(".promotion-choice")
                 puzzleCompleted = true;
                 drawBoard();
                 showMessage("success");
-
                 setTimeout(() => {
-                    currentPuzzleIndex++;
-saveProgress();
-                    if (currentPuzzleIndex >= puzzles.length) {
-                        showMessage("finished");
-                        return;
-                    }
+    advanceToNextPuzzle();
+}, 1500);
 
-                    loadPuzzle();
-                }, 1500);
+                   
 
             } else {
                 showMessage("retry");
@@ -585,16 +704,20 @@ promotionCancel.addEventListener("click", () => {
 });// Save and restore puzzle progress
 
 const PROGRESS_KEY = "chessKidsProgress";
-
+function getProgressKey() {
+    return selectedGroup === "all"
+        ? PROGRESS_KEY
+        : `${PROGRESS_KEY}_${selectedGroup}`;
+}
 function saveProgress() {
     localStorage.setItem(
-        PROGRESS_KEY,
+        getProgressKey(),
         String(currentPuzzleIndex)
     );
 }
 
 function restoreProgress() {
-    const saved = localStorage.getItem(PROGRESS_KEY);
+   const saved = localStorage.getItem(getProgressKey());
 
     if (saved === null) {
         return 0;
@@ -604,7 +727,7 @@ function restoreProgress() {
 
     if (!Number.isInteger(index) ||
         index < 0 ||
-        index >= puzzles.length) {
+      index > puzzles.length) {
         return 0;
     }
 
@@ -747,4 +870,109 @@ if ("serviceWorker" in navigator) {
                 );
             });
     });
+}// Version 1.1 - Puzzle group selection
+
+const groupButton = document.getElementById("group-button");
+const groupDialog = document.getElementById("group-dialog");
+const groupList = document.getElementById("group-list");
+const groupCancel = document.getElementById("group-cancel");
+// Select a puzzle group
+function selectPuzzleGroup(group) {
+    const selectedPuzzles = getPuzzlesByGroup(group);
+
+    if (selectedPuzzles.length === 0) {
+        console.error("No puzzles in group:", group);
+        return;
+    }
+
+    selectedGroup = group;
+    localStorage.setItem(SELECTED_GROUP_KEY, selectedGroup);
+    puzzles = selectedPuzzles;
+
+    currentPuzzleIndex = restoreProgress();
+    groupDialog.hidden = true;
+
+    loadPuzzle();
 }
+const groupNames = {
+    he: {
+        "1": "מט פשוט 1",
+        "2": "מט פשוט 2",
+        "3": "מט פשוט+",
+        "4": "שח נגלה ושח כפול",
+        "5": "ריתוק ותרגילים מעורבים"
+    },
+    en: {
+        "1": "Simple Mate 1",
+        "2": "Simple Mate 2",
+        "3": "Simple Mate+",
+        "4": "Discovered & Double Check",
+        "5": "Pin & Mixed Puzzles"
+    }
+};
+function openGroupDialog() {
+    groupList.innerHTML = "";
+
+    const groups = getPuzzleGroups();
+
+    const allButton = document.createElement("button");
+    allButton.type = "button";
+    allButton.textContent =
+        currentLanguage === "he"
+            ? `כל התרגילים (${allPuzzles.length})`
+            : `All Puzzles (${allPuzzles.length})`;
+allButton.addEventListener("click", () => {
+    selectPuzzleGroup("all");
+});
+    groupList.appendChild(allButton);
+
+    groups.forEach(group => {
+       const count = getPuzzlesByGroup(group).length;
+
+        const button = document.createElement("button");
+        button.type = "button";
+
+       const groupName = groupNames[currentLanguage][group];
+
+button.textContent =
+    currentLanguage === "he"
+        ? `קבוצה ${group} — ${groupName} (${count})`
+        : `Group ${group} — ${groupName} (${count})`;
+button.addEventListener("click", () => {
+    selectPuzzleGroup(group);
+});
+        groupList.appendChild(button);
+    });
+
+    document.getElementById("group-dialog-title").textContent =
+        currentLanguage === "he"
+            ? "בחירת קבוצת תרגילים"
+            : "Choose Puzzle Group";
+
+    groupCancel.textContent =
+        currentLanguage === "he" ? "ביטול" : "Cancel";
+
+    groupDialog.hidden = false;
+}
+
+groupButton.addEventListener("click", openGroupDialog);
+document.getElementById("completion-groups-button")
+    .addEventListener("click", () => {
+        document.getElementById("completion-screen").hidden = true;
+        document.getElementById("chessboard").hidden = false;
+        openGroupDialog();
+    });
+groupCancel.addEventListener("click", () => {
+    groupDialog.hidden = true;
+});
+
+
+// Welcome screen
+const welcomeScreen = document.getElementById("welcome-screen");
+const welcomeStartButton = document.getElementById("welcome-start-button");
+
+welcomeScreen.hidden = false;
+
+welcomeStartButton.addEventListener("click", () => {
+    welcomeScreen.hidden = true;
+});

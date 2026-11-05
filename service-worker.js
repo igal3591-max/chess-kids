@@ -1,6 +1,6 @@
 // Chess Kids - Service Worker
 
-const CACHE_NAME = "chess-kids-v2";
+const CACHE_NAME = "chess-kids-v7";
 
 const FILES_TO_CACHE = [
     "./",
@@ -11,15 +11,27 @@ const FILES_TO_CACHE = [
     "./chess_app_database.json",
     "./manifest.webmanifest",
     "./icons/chess-icon-192.png",
-    "./icons/chess-icon-512.png"
+    "./icons/chess-icon-512.png",
+        "./pieces/wK.svg",
+    "./pieces/wQ.svg",
+    "./pieces/wR.svg",
+    "./pieces/wB.svg",
+    "./pieces/wN.svg",
+    "./pieces/wP.svg",
+    "./pieces/bK.svg",
+    "./pieces/bQ.svg",
+    "./pieces/bR.svg",
+    "./pieces/bB.svg",
+    "./pieces/bN.svg",
+    "./pieces/bP.svg"
 ];
 
 // Install: cache application files
 self.addEventListener("install", event => {
     event.waitUntil(
-        caches.open(CACHE_NAME).then(cache => {
-            return cache.addAll(FILES_TO_CACHE);
-        })
+        caches.open(CACHE_NAME)
+            .then(cache => cache.addAll(FILES_TO_CACHE))
+            .then(() => self.skipWaiting())
     );
 });
 
@@ -47,9 +59,19 @@ self.addEventListener("fetch", event => {
         return;
     }
 
-    event.respondWith(
-        caches.match(event.request).then(cached => {
-            return cached || fetch(event.request);
+   event.respondWith(
+    fetch(event.request)
+        .then(response => {
+            if (response.ok && event.request.method === "GET") {
+                const copy = response.clone();
+
+                caches.open(CACHE_NAME).then(cache => {
+                    cache.put(event.request, copy);
+                });
+            }
+
+            return response;
         })
-    );
+        .catch(() => caches.match(event.request))
+);
 });

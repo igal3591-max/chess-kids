@@ -18,7 +18,26 @@
 </head>
 
 <body>
+<section id="welcome-screen" hidden>
 
+    <img
+        src="icons/chess-icon-512.png"
+        alt="Chess Kids"
+        width="180"
+        height="180"
+    >
+
+    <h1 id="welcome-title">לומדים שחמט</h1>
+
+    <h2 id="welcome-subtitle">תרגילי מט</h2>
+<button id="welcome-language-button" type="button">
+    English
+</button>
+    <button id="welcome-start-button" type="button">
+        התחל
+    </button>
+
+</section>
     <header>
         <h1 id="app-title">בעיות שחמט למתחילים</h1>
 
@@ -49,13 +68,62 @@
 </div>
 <button id="restart-button" type="button">
     התחל מחדש
+</button><button id="group-button" type="button">
+    בחירת קבוצת תרגילים
 </button>
+<!-- Puzzle group selection dialog -->
+<div id="group-dialog" class="group-dialog" hidden>
+
+    <div class="group-dialog-content">
+
+        <h2 id="group-dialog-title">
+            בחירת קבוצת תרגילים
+        </h2>
+
+        <div id="group-list"></div>
+
+        <button id="group-cancel" type="button">
+            ביטול
+        </button>
+
+    </div>
+
+</div>
         <div id="chessboard"></div>
 
         <div id="message"
              role="status"
              aria-live="polite"></div>
+<!-- Stage 1 completion screen -->
+<section id="completion-screen" hidden>
 
+    <div class="completion-content">
+
+        <div class="completion-trophy">🏆</div>
+
+        <h2 id="completion-title">
+            כל הכבוד! אלופים בשחמט!
+        </h2>
+
+        <p id="completion-description">
+            השלמתם בהצלחה את כל 90 התרגילים!
+        </p>
+
+        <div class="completion-score">
+            90 / 90
+        </div>
+
+        <p id="completion-next-stage">
+            השלב הבא: מט בשני מהלכים!
+        </p>
+
+        <button id="completion-groups-button" type="button">
+            חזרה לבחירת קבוצות
+        </button>
+
+    </div>
+
+</section>
     </main>
 
        <!-- Chess rules library -->
