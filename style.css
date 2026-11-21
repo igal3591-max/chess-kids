@@ -812,7 +812,8 @@ h2 {
     cursor: pointer;
 }
 
-#welcome-start-button:hover {
+#welcome-start-button:hover,
+#exam-start-button:hover {
     background: #388e3c;
 }
 
@@ -825,7 +826,8 @@ h2 {
         font-size: 21px;
     }
 
-    #welcome-start-button {
+    #welcome-start-button,
+#exam-start-button {
         font-size: 22px;
     }
 }
@@ -845,3 +847,84 @@ h2 {
 #welcome-language-button:hover {
     background: #e0f2e3;
 }   
+/* Exam introduction — bold text */
+#exam-intro-description,
+#exam-intro-rules {
+    font-weight: bold;
+}
+/* Exam start button */
+#exam-start-button {
+    margin-top: 15px;
+    padding: 14px 48px;
+    border: none;
+    border-radius: 16px;
+    background: #4caf50;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#exam-start-button:hover {
+    background: #388e3c;
+}
+
+@media (max-width: 600px) {
+    #exam-start-button {
+        font-size: 22px;
+    }
+}
+/* Exam introduction — uniform font */
+#exam-intro-description,
+#exam-intro-rules {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+#exam-intro-description {
+    margin-bottom: 24px;
+}
+/* Exam result buttons */
+#exam-retry-button,
+#exam-practice-button,
+#exam-next-stage-button {
+    margin: 10px 6px;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 16px;
+    background: #4caf50;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#exam-retry-button:hover,
+#exam-practice-button:hover,
+#exam-next-stage-button:hover {
+    background: #388e3c;
+}
+
+@media (max-width: 600px) {
+    #exam-retry-button,
+    #exam-practice-button,
+    #exam-next-stage-button {
+        font-size: 18px;
+        padding: 12px 18px;
+    }
+}
+/* Hide regular buttons on the exam results screen */
+body:has(#exam-result-screen:not([hidden])) #restart-button,
+body:has(#exam-result-screen:not([hidden])) #group-button {
+    display: none !important;
+}
+/* Hide puzzle controls on the exam introduction screen */
+body:has(#exam-intro-screen:not([hidden])) #instruction,
+body:has(#exam-intro-screen:not([hidden])) #progress,
+body:has(#exam-intro-screen:not([hidden])) .progress-container,
+body:has(#exam-intro-screen:not([hidden])) #restart-button,
+body:has(#exam-intro-screen:not([hidden])) #group-button,
+body:has(#exam-intro-screen:not([hidden])) #message {
+    display: none !important;
+}
