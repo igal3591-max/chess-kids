@@ -9,6 +9,10 @@ let currentLanguage = localStorage.getItem("chessLanguage") || "en";
 let puzzles = [];
 
 let allPuzzles = [];
+let examPuzzles = [];
+let examScore = 0;
+let examAttempts = 0;
+let examActive = false;
 const SELECTED_GROUP_KEY = "chessKidsSelectedGroup";
 
 let selectedGroup =
@@ -95,17 +99,48 @@ document.getElementById("group-button").textContent = t.groupButton;
 document.getElementById("completion-title").textContent = t.completionTitle;
 document.getElementById("completion-description").textContent = t.completionDescription;
 document.getElementById("completion-groups-button").textContent = t.completionGroupsButton;
-document.getElementById("completion-next-stage").textContent = t.completionNextStage;   
+document.getElementById("completion-next-stage").textContent = t.completionNextStage;
+    // Exam introduction — Hebrew / English
+    document.getElementById("exam-intro-title").textContent =
+        isHebrew
+            ? "אבחון מסכם — מט במסע אחד"
+            : "Final Exam — Mate in One";
+
+    document.getElementById("exam-intro-description").innerHTML =
+        isHebrew
+            ? "<strong>סיימתם את 90 תרגילי הלימוד!<br>כעת הגיע הזמן לבדוק את הידע שלכם.</strong>"
+            : "<strong>You have completed all 90 practice puzzles!<br>Now it's time to test your knowledge.</strong>";
+
+    document.getElementById("exam-intro-rules").innerHTML =
+        isHebrew
+            ? "במבחן 20 תרגילים.<br>לכל תרגיל יש שני ניסיונות.<br>לאחר שני ניסיונות שגויים עוברים לתרגיל הבא.<br>כדי לעבור יש לפתור לפחות 19 מתוך 20 התרגילים."
+            : "The exam has 20 puzzles.<br>You have two attempts for each puzzle.<br>After two incorrect attempts, you move to the next puzzle.<br>To pass, you must solve at least 19 out of 20 puzzles.";
+
+    document.getElementById("exam-start-button").textContent =
+        isHebrew ? "התחלת המבחן" : "Start Exam";   
 updateProgress();
+// Update exam results when switching language
+if (!document.getElementById("exam-result-screen").hidden) {
+    showExamResults();
+}
 }
 
 function updateProgress() {
     const t = translations[currentLanguage];
 
+    const groupPrefix =
+        selectedGroup && selectedGroup !== "all"
+            ? (currentLanguage === "he"
+                ? `קבוצה ${selectedGroup} — `
+                : `Group ${selectedGroup} — `)
+            : "";
+
     document.getElementById("progress").textContent =
-        `${t.progress} ${currentPuzzleIndex + 1} ${t.of} ${puzzles.length}`;
-        updateProgressBar();
+        `${groupPrefix}${t.progress} ${currentPuzzleIndex + 1} ${t.of} ${puzzles.length}`;
+
+    updateProgressBar();
 }
+
 
 function showMessage(type) {
     const t = translations[currentLanguage];
@@ -285,6 +320,9 @@ if (promotionMoves.length > 0) {
     }
 
     if (successfulMove) {
+        if (examActive) {
+    examScore++;
+}
         game.move({
             from: successfulMove.from,
             to: successfulMove.to,
@@ -302,6 +340,7 @@ if (promotionMoves.length > 0) {
     } else {
         showMessage("retry");
         drawBoard();
+        registerExamMistake();
     }
 }function areAllGroupsCompleted() {
     const groups = ["1", "2", "3", "4", "5"];
@@ -318,7 +357,16 @@ function advanceToNextPuzzle() {
     currentPuzzleIndex++;
     saveProgress();
 
+    // Save exam score and current position
+if (selectedGroup === "exam" && examActive) {
+    examAttempts = 0;
+    saveExamState();
+}
    if (currentPuzzleIndex >= puzzles.length) {
+        if (selectedGroup === "exam") {
+        showExamResults();
+        return;
+    }
     if (areAllGroupsCompleted()) {
         showMessage("finished");
         console.log("All 90 puzzles completed!");
@@ -344,9 +392,21 @@ function showCompletionScreen() {
     }
 
     chessboard.hidden = true;
-    completionScreen.hidden = false;
+    completionScreen.hidden = true;
+document.getElementById("exam-intro-screen").hidden = false;
 }
 function loadPuzzle() {
+        // Restore exam safely after page refresh
+    if (selectedGroup === "exam" && !examActive) {
+        document.getElementById("welcome-screen").hidden = true;
+        document.getElementById("completion-screen").hidden = true;
+        document.getElementById("exam-result-screen").hidden = true;
+        boardElement.hidden = true;
+        messageElement.textContent = "";
+        document.getElementById("exam-intro-screen").hidden = false;
+        return;
+    }
+       
         if (currentPuzzleIndex >= puzzles.length) {
         showMessage("finished");
 
@@ -381,10 +441,13 @@ puzzleCompleted = false;
     drawBoard();
 }// Get puzzle groups from the database
  function getPuzzleGroups() {
-    return ["1", "2", "3", "4", "5"];
+    return ["1", "2", "3", "4", "5", "exam"];
 }
 
 function getPuzzlesByGroup(group) {
+        if (group === "exam") {
+        return examPuzzles;
+    }
     if (group === "all") {
         return allPuzzles;
     }
@@ -428,6 +491,19 @@ async function loadDatabase() {
         }
 
         const data = await response.json();
+        // Load the 20 exam puzzles separately
+const examResponse = await fetch("mate1_exam_20_preliminary.json");
+
+if (!examResponse.ok) {
+    throw new Error("Exam database not found");
+}
+
+const examData = await examResponse.json();
+
+examPuzzles = Array.isArray(examData)
+    ? examData
+    : examData.puzzles || [];
+    console.log("Exam puzzles loaded:", examPuzzles.length);
 allPuzzles = data.puzzles.filter(     
             puzzle =>
                 puzzle.app_status === "READY" &&
@@ -447,6 +523,40 @@ puzzles = getPuzzlesByGroup(selectedGroup);
 
       // Restore saved progress
 currentPuzzleIndex = restoreProgress();
+
+// Restore exam state separately
+if (selectedGroup === "exam") {
+    const savedExam = restoreExamState();
+    // Restore completed exam results
+if (savedExam &&
+    !savedExam.active &&
+    savedExam.puzzleIndex === examPuzzles.length) {
+
+    currentPuzzleIndex = savedExam.puzzleIndex;
+    examScore = savedExam.score;
+    examAttempts = savedExam.attempts;
+    examActive = false;
+
+    document.getElementById("welcome-screen").hidden = true;
+    showExamResults();
+    return;
+}
+
+    if (savedExam && savedExam.active &&
+        savedExam.puzzleIndex < examPuzzles.length) {
+
+        currentPuzzleIndex = savedExam.puzzleIndex;
+        examScore = savedExam.score;
+        examAttempts = savedExam.attempts;
+        examActive = true;
+
+        document.getElementById("welcome-screen").hidden = true;
+        document.getElementById("exam-intro-screen").hidden = true;
+        document.getElementById("exam-result-screen").hidden = true;
+        boardElement.hidden = false;
+    }
+}
+
 loadPuzzle();
 
     } catch (error) {
@@ -677,6 +787,9 @@ document.querySelectorAll(".promotion-choice")
                 });
 
                 puzzleCompleted = true;
+                if (examActive) {
+    examScore++;
+}
                 drawBoard();
                 showMessage("success");
                 setTimeout(() => {
@@ -688,6 +801,7 @@ document.querySelectorAll(".promotion-choice")
             } else {
                 showMessage("retry");
                 drawBoard();
+                registerExamMistake();
             }
         });
     });
@@ -878,6 +992,16 @@ const groupList = document.getElementById("group-list");
 const groupCancel = document.getElementById("group-cancel");
 // Select a puzzle group
 function selectPuzzleGroup(group) {
+        if (group === "exam") {
+        groupDialog.hidden = true;
+        boardElement.hidden = true;
+
+        document.getElementById("exam-result-screen").hidden = true;
+        document.getElementById("completion-screen").hidden = true;
+        examIntroScreen.hidden = false;
+
+        return;
+    }
     const selectedPuzzles = getPuzzlesByGroup(group);
 
     if (selectedPuzzles.length === 0) {
@@ -900,14 +1024,16 @@ const groupNames = {
         "2": "מט פשוט 2",
         "3": "מט פשוט+",
         "4": "שח נגלה ושח כפול",
-        "5": "ריתוק ותרגילים מעורבים"
+        "5": "ריתוק ותרגילים מעורבים",
+"exam": "מבחן מסכם — מט במסע אחד"
     },
     en: {
         "1": "Simple Mate 1",
         "2": "Simple Mate 2",
         "3": "Simple Mate+",
         "4": "Discovered & Double Check",
-        "5": "Pin & Mixed Puzzles"
+       "5": "Pin & Mixed Puzzles",
+"exam": "Final Exam — Mate in One"
     }
 };
 function openGroupDialog() {
@@ -915,16 +1041,7 @@ function openGroupDialog() {
 
     const groups = getPuzzleGroups();
 
-    const allButton = document.createElement("button");
-    allButton.type = "button";
-    allButton.textContent =
-        currentLanguage === "he"
-            ? `כל התרגילים (${allPuzzles.length})`
-            : `All Puzzles (${allPuzzles.length})`;
-allButton.addEventListener("click", () => {
-    selectPuzzleGroup("all");
-});
-    groupList.appendChild(allButton);
+
 
     groups.forEach(group => {
        const count = getPuzzlesByGroup(group).length;
@@ -976,3 +1093,195 @@ welcomeScreen.hidden = false;
 welcomeStartButton.addEventListener("click", () => {
     welcomeScreen.hidden = true;
 });
+// Exam — start button
+const examIntroScreen = document.getElementById("exam-intro-screen");
+const examStartButton = document.getElementById("exam-start-button");
+
+examStartButton.addEventListener("click", () => {
+    examIntroScreen.hidden = true;
+
+    selectedGroup = "exam";
+    localStorage.setItem(SELECTED_GROUP_KEY, selectedGroup);
+
+    puzzles = examPuzzles;
+    currentPuzzleIndex = 0;
+
+    examScore = 0;
+    examAttempts = 0;
+    examActive = true;
+    saveProgress();
+saveExamState();
+
+    boardElement.hidden = false;
+    loadPuzzle();
+});
+// Exam — count incorrect attempts
+function registerExamMistake() {
+    if (!examActive) return;
+
+    examAttempts++;
+    saveExamState();
+
+    if (examAttempts >= 2) {
+        puzzleCompleted = true;
+
+        setTimeout(() => {
+            advanceToNextPuzzle();
+        }, 1500);
+    }
+}
+// Exam — display final results
+function showExamResults() {
+    examActive = false;
+    // Save completed exam state
+saveExamState();
+    // Clear the last puzzle message
+messageElement.textContent = "";
+messageElement.className = "";
+    // Hide welcome screen
+document.getElementById("welcome-screen").hidden = true;
+    // Display exam completion instead of Puzzle 21 of 20
+document.getElementById("progress").textContent =
+    currentLanguage === "he"
+        ? "המבחן הסתיים"
+        : "Exam Completed";
+
+
+    const passed = examScore >= 19;
+    const isHebrew = currentLanguage === "he";
+
+    document.getElementById("chessboard").hidden = true;
+    document.getElementById("exam-intro-screen").hidden = true;
+    document.getElementById("completion-screen").hidden = true;
+
+    const resultScreen =
+        document.getElementById("exam-result-screen");
+
+    document.getElementById("exam-result-title").textContent =
+        passed
+            ? (isHebrew ? "כל הכבוד! 🏆" : "Congratulations! 🏆")
+            : (isHebrew ? "כדאי להמשיך להתאמן" : "Keep Practicing!");
+
+    document.getElementById("exam-result-score").textContent =
+        isHebrew
+            ? `הציון שלך: ${examScore} מתוך 20`
+            : `Your score: ${examScore} out of 20`;
+
+    document.getElementById("exam-result-message").textContent =
+        passed
+            ? (isHebrew
+                ? "עברת את המבחן! אפשר להתקדם למט בשני מהלכים."
+                : "You passed! You can advance to Mate in Two.")
+            : (isHebrew
+                ? "מומלץ לחזור לתרגול ולנסות שוב את המבחן."
+                : "Practice some more and try the exam again.");
+
+    document.getElementById("exam-retry-button").hidden = passed;
+    document.getElementById("exam-next-stage-button").hidden = !passed;
+
+// Exam result buttons — Hebrew / English
+document.getElementById("exam-retry-button").textContent =
+    isHebrew ? "נסה את המבחן שוב" : "Try Exam Again";
+
+document.getElementById("exam-practice-button").textContent =
+    isHebrew ? "חזרה לתרגול" : "Back to Practice";
+
+document.getElementById("exam-next-stage-button").textContent =
+    isHebrew ? "מעבר למט בשני מהלכים" : "Continue to Mate in Two";
+    resultScreen.hidden = false;
+}
+// Exam — retry
+document.getElementById("exam-retry-button")
+    .addEventListener("click", () => {
+        document.getElementById("exam-result-screen").hidden = true;
+
+        selectedGroup = "exam";
+        localStorage.setItem(SELECTED_GROUP_KEY, selectedGroup);
+
+        puzzles = examPuzzles;
+        currentPuzzleIndex = 0;
+
+        examScore = 0;
+        examAttempts = 0;
+        examActive = true;
+
+        saveProgress();
+        saveExamState();
+
+        boardElement.hidden = false;
+        loadPuzzle();
+    });
+    // Exam — return to practice
+document.getElementById("exam-practice-button")
+    .addEventListener("click", () => {
+        document.getElementById("exam-result-screen").hidden = true;
+
+        examActive = false;
+
+        selectedGroup = "1";
+        localStorage.setItem(SELECTED_GROUP_KEY, selectedGroup);
+
+        puzzles = getPuzzlesByGroup(selectedGroup);
+        currentPuzzleIndex = restoreProgress();
+
+        boardElement.hidden = false;
+
+        if (currentPuzzleIndex >= puzzles.length) {
+            currentPuzzleIndex = 0;
+            saveProgress();
+        }
+
+        loadPuzzle();
+        openGroupDialog();
+    });
+    // Exam — advance to Mate in Two
+document.getElementById("exam-next-stage-button")
+    .addEventListener("click", () => {
+        window.location.href = "./mate2/";
+    });
+    // Save exam state separately from practice progress
+function saveExamState() {
+    const examState = {
+        puzzleIndex: currentPuzzleIndex,
+        score: examScore,
+        attempts: examAttempts,
+        active: examActive
+    };
+
+    localStorage.setItem(
+        "chessKidsExamState",
+        JSON.stringify(examState)
+    );
+}
+// Restore saved exam state
+function restoreExamState() {
+    const saved = localStorage.getItem("chessKidsExamState");
+
+    if (!saved) {
+        return null;
+    }
+
+    try {
+        const state = JSON.parse(saved);
+
+        if (
+            !Number.isInteger(state.puzzleIndex) ||
+            state.puzzleIndex < 0 ||
+            state.puzzleIndex > examPuzzles.length ||
+            !Number.isInteger(state.score) ||
+            state.score < 0 ||
+            state.score > 20 ||
+            !Number.isInteger(state.attempts) ||
+            state.attempts < 0 ||
+            state.attempts > 2 ||
+            typeof state.active !== "boolean"
+        ) {
+            return null;
+        }
+
+        return state;
+    } catch (error) {
+        console.error("Cannot restore exam state:", error);
+        return null;
+    }
+}
