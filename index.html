@@ -95,6 +95,46 @@
              role="status"
              aria-live="polite"></div>
 <!-- Stage 1 completion screen -->
+<section id="exam-intro-screen" hidden>
+    <h2 id="exam-intro-title">מבחן מסכם — מט במסע אחד</h2>
+
+   <p id="exam-intro-description">
+    <strong>
+        סיימתם את 90 תרגילי הלימוד!<br>
+        כעת הגיע הזמן לבדוק את הידע שלכם.
+    </strong>
+</p>
+    <p id="exam-intro-rules">
+        במבחן 20 תרגילים.
+        לכל תרגיל יש שני ניסיונות.
+        לאחר שני ניסיונות שגויים עוברים לתרגיל הבא.
+        כדי לעבור לשלב מט בשני מהלכים,
+        יש לפתור לפחות 19 מתוך 20 התרגילים.
+    </p>
+
+    <button id="exam-start-button" type="button">
+        התחלת המבחן
+    </button>
+</section>
+<section id="exam-result-screen" hidden>
+    <h2 id="exam-result-title"></h2>
+
+    <p id="exam-result-score"></p>
+
+    <p id="exam-result-message"></p>
+
+    <button id="exam-retry-button" type="button" hidden>
+        נסה את המבחן שוב
+    </button>
+
+    <button id="exam-practice-button" type="button">
+        חזרה לתרגול
+    </button>
+
+    <button id="exam-next-stage-button" type="button" hidden>
+        מעבר למט בשני מהלכים
+    </button>
+</section>
 <section id="completion-screen" hidden>
 
     <div class="completion-content">
